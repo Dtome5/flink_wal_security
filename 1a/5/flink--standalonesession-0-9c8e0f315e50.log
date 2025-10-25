@@ -1,0 +1,312 @@
+2025-10-22 18:52:15,641 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2025-10-22 18:52:15,645 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Preconfiguration: 
+2025-10-22 18:52:15,645 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - 
+
+
+RESOURCE_PARAMS extraction logs:
+jvm_params: -Xmx1073741824 -Xms1073741824 -XX:MaxMetaspaceSize=268435456
+dynamic_configs: -D jobmanager.memory.off-heap.size=134217728b -D jobmanager.memory.jvm-overhead.min=201326592b -D jobmanager.memory.jvm-metaspace.size=268435456b -D jobmanager.memory.heap.size=1073741824b -D jobmanager.memory.jvm-overhead.max=201326592b
+logs: INFO  [] - Using standard YAML parser to load flink configuration file from /opt/flink/conf/config.yaml.
+INFO  [] - Loading configuration property: blob.server.port, 6124
+INFO  [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+INFO  [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+INFO  [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+INFO  [] - Loading configuration property: jobmanager.rpc.address, 9c8e0f315e50
+INFO  [] - Loading configuration property: execution.checkpointing.incremental, false
+INFO  [] - Loading configuration property: state.backend.rocksdb.localdir, /tmp/rocksdb
+INFO  [] - Loading configuration property: execution.target, remote
+INFO  [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+INFO  [] - Loading configuration property: jobmanager.rpc.port, 6123
+INFO  [] - Loading configuration property: query.server.port, 6125
+INFO  [] - Loading configuration property: rest.bind-address, 0.0.0.0
+INFO  [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+INFO  [] - Loading configuration property: execution.checkpointing.savepoint-dir, file:///tmp/flink-checkpoints
+INFO  [] - Loading configuration property: taskmanager.host, 127.0.0.1
+INFO  [] - Loading configuration property: execution.checkpointing.externalized-checkpoint-retention, RETAIN_ON_CANCELLATION
+INFO  [] - Loading configuration property: parallelism.default, 1
+INFO  [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+INFO  [] - Loading configuration property: execution.checkpointing.local-backup.enabled, true
+INFO  [] - Loading configuration property: rest.address, 127.0.0.1
+INFO  [] - Loading configuration property: execution.state-recovery.ignore-unclaimed-state, true
+INFO  [] - Loading configuration property: execution.checkpointing.dir, file:///tmp/flink-checkpoints
+INFO  [] - Loading configuration property: env.java.opts.all, --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+INFO  [] - Loading configuration property: state.backend.type, rocksdb
+INFO  [] - The derived from fraction jvm overhead memory (160.000mb (167772162 bytes)) is less than its min value 192.000mb (201326592 bytes), min value will be used instead
+INFO  [] - Final Master Memory configuration:
+INFO  [] -   Total Process Memory: 1.563gb (1677721600 bytes)
+INFO  [] -     Total Flink Memory: 1.125gb (1207959552 bytes)
+INFO  [] -       JVM Heap:         1024.000mb (1073741824 bytes)
+INFO  [] -       Off-heap:         128.000mb (134217728 bytes)
+INFO  [] -     JVM Metaspace:      256.000mb (268435456 bytes)
+INFO  [] -     JVM Overhead:       192.000mb (201326592 bytes)
+
+2025-10-22 18:52:15,645 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2025-10-22 18:52:15,658 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Starting StandaloneSessionClusterEntrypoint (Version: 2.1.0, Scala: 2.12, Rev:4cb6bd3, Date:2025-07-21T13:23:51+02:00)
+2025-10-22 18:52:15,660 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  OS current user: flink
+2025-10-22 18:52:15,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+2025-10-22 18:52:15,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM: OpenJDK 64-Bit Server VM - Eclipse Adoptium - 17/17.0.16+8
+2025-10-22 18:52:15,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Arch: amd64
+2025-10-22 18:52:15,667 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Maximum heap size: 1024 MiBytes
+2025-10-22 18:52:15,668 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JAVA_HOME: /opt/java/openjdk
+2025-10-22 18:52:15,669 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  No Hadoop Dependency available
+2025-10-22 18:52:15,669 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM Options:
+2025-10-22 18:52:15,670 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xmx1073741824
+2025-10-22 18:52:15,670 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xms1073741824
+2025-10-22 18:52:15,670 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -XX:MaxMetaspaceSize=268435456
+2025-10-22 18:52:15,670 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -XX:+IgnoreUnrecognizedVMOptions
+2025-10-22 18:52:15,670 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED
+2025-10-22 18:52:15,670 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+2025-10-22 18:52:15,670 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.lang=ALL-UNNAMED
+2025-10-22 18:52:15,670 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.net=ALL-UNNAMED
+2025-10-22 18:52:15,671 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.io=ALL-UNNAMED
+2025-10-22 18:52:15,671 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.nio=ALL-UNNAMED
+2025-10-22 18:52:15,671 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+2025-10-22 18:52:15,671 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+2025-10-22 18:52:15,671 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.text=ALL-UNNAMED
+2025-10-22 18:52:15,671 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.time=ALL-UNNAMED
+2025-10-22 18:52:15,671 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util=ALL-UNNAMED
+2025-10-22 18:52:15,671 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+2025-10-22 18:52:15,672 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+2025-10-22 18:52:15,672 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+2025-10-22 18:52:15,672 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog.file=/opt/flink/log/flink--standalonesession-0-9c8e0f315e50.log
+2025-10-22 18:52:15,672 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configuration=file:/opt/flink/conf/log4j.properties
+2025-10-22 18:52:15,672 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configurationFile=file:/opt/flink/conf/log4j.properties
+2025-10-22 18:52:15,672 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlogback.configurationFile=file:/opt/flink/conf/logback.xml
+2025-10-22 18:52:15,672 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Program Arguments:
+2025-10-22 18:52:15,673 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2025-10-22 18:52:15,674 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.off-heap.size=134217728b
+2025-10-22 18:52:15,674 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2025-10-22 18:52:15,674 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.min=201326592b
+2025-10-22 18:52:15,674 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2025-10-22 18:52:15,674 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-metaspace.size=268435456b
+2025-10-22 18:52:15,674 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2025-10-22 18:52:15,675 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.heap.size=1073741824b
+2025-10-22 18:52:15,675 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2025-10-22 18:52:15,675 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.max=201326592b
+2025-10-22 18:52:15,675 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --configDir
+2025-10-22 18:52:15,675 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     /opt/flink/conf
+2025-10-22 18:52:15,675 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Classpath: /opt/flink/lib/flink-cep-2.1.0.jar:/opt/flink/lib/flink-connector-files-2.1.0.jar:/opt/flink/lib/flink-csv-2.1.0.jar:/opt/flink/lib/flink-json-2.1.0.jar:/opt/flink/lib/flink-scala_2.12-2.1.0.jar:/opt/flink/lib/flink-table-api-java-uber-2.1.0.jar:/opt/flink/lib/flink-table-planner-loader-2.1.0.jar:/opt/flink/lib/flink-table-runtime-2.1.0.jar:/opt/flink/lib/log4j-1.2-api-2.24.3.jar:/opt/flink/lib/log4j-api-2.24.3.jar:/opt/flink/lib/log4j-core-2.24.3.jar:/opt/flink/lib/log4j-layout-template-json-2.24.3.jar:/opt/flink/lib/log4j-slf4j-impl-2.24.3.jar:/opt/flink/lib/flink-dist-2.1.0.jar::::
+2025-10-22 18:52:15,676 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2025-10-22 18:52:15,679 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Registered UNIX signal handlers for [TERM, HUP, INT]
+2025-10-22 18:52:15,693 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Using standard YAML parser to load flink configuration file from /opt/flink/conf/config.yaml.
+2025-10-22 18:52:15,856 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: blob.server.port, 6124
+2025-10-22 18:52:15,858 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+2025-10-22 18:52:15,858 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+2025-10-22 18:52:15,858 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+2025-10-22 18:52:15,858 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, 9c8e0f315e50
+2025-10-22 18:52:15,859 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.incremental, false
+2025-10-22 18:52:15,859 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: state.backend.rocksdb.localdir, /tmp/rocksdb
+2025-10-22 18:52:15,861 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.target, remote
+2025-10-22 18:52:15,861 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+2025-10-22 18:52:15,861 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+2025-10-22 18:52:15,861 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: query.server.port, 6125
+2025-10-22 18:52:15,861 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, 0.0.0.0
+2025-10-22 18:52:15,861 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+2025-10-22 18:52:15,861 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.savepoint-dir, file:///tmp/flink-checkpoints
+2025-10-22 18:52:15,861 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.host, 127.0.0.1
+2025-10-22 18:52:15,861 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.externalized-checkpoint-retention, RETAIN_ON_CANCELLATION
+2025-10-22 18:52:15,862 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+2025-10-22 18:52:15,862 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+2025-10-22 18:52:15,862 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.local-backup.enabled, true
+2025-10-22 18:52:15,862 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, 127.0.0.1
+2025-10-22 18:52:15,862 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.state-recovery.ignore-unclaimed-state, true
+2025-10-22 18:52:15,862 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.dir, file:///tmp/flink-checkpoints
+2025-10-22 18:52:15,862 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.all, --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+2025-10-22 18:52:15,862 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: state.backend.type, rocksdb
+2025-10-22 18:52:15,862 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.off-heap.size, 134217728b
+2025-10-22 18:52:15,862 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.min, 201326592b
+2025-10-22 18:52:15,862 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-metaspace.size, 268435456b
+2025-10-22 18:52:15,863 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.heap.size, 1073741824b
+2025-10-22 18:52:15,865 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.max, 201326592b
+2025-10-22 18:52:15,938 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Starting StandaloneSessionClusterEntrypoint.
+2025-10-22 18:52:16,001 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install default filesystem.
+2025-10-22 18:52:16,007 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+2025-10-22 18:52:16,033 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+2025-10-22 18:52:16,043 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+2025-10-22 18:52:16,046 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+2025-10-22 18:52:16,047 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+2025-10-22 18:52:16,047 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+2025-10-22 18:52:16,047 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-otel
+2025-10-22 18:52:16,047 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+2025-10-22 18:52:16,047 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+2025-10-22 18:52:16,047 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+2025-10-22 18:52:16,074 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install security context.
+2025-10-22 18:52:16,155 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+2025-10-22 18:52:16,183 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /tmp/jaas-15544473787376136927.conf.
+2025-10-22 18:52:16,202 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+2025-10-22 18:52:16,214 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Initializing cluster services.
+2025-10-22 18:52:16,239 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Using working directory: WorkingDirectory(/tmp/jm_f017bf131a5f7a6cc25bd4ef572cf457).
+2025-10-22 18:52:16,740 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address 9c8e0f315e50:6123, bind address 0.0.0.0:6123.
+2025-10-22 18:52:17,885 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+2025-10-22 18:52:17,986 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2025-10-22 18:52:17,989 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+2025-10-22 18:52:18,301 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink@9c8e0f315e50:6123]
+2025-10-22 18:52:18,482 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink@9c8e0f315e50:6123
+2025-10-22 18:52:18,524 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Loading delegation token providers
+2025-10-22 18:52:18,530 INFO  org.apache.flink.runtime.security.token.hadoop.HadoopFSDelegationTokenProvider [] - Hadoop FS is not available (not packaged with this application): NoClassDefFoundError : "org/apache/hadoop/conf/Configuration".
+2025-10-22 18:52:18,530 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hadoopfs loaded and initialized
+2025-10-22 18:52:18,536 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hbase loaded and initialized
+2025-10-22 18:52:18,543 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2025-10-22 18:52:18,545 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2025-10-22 18:52:18,545 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2025-10-22 18:52:18,545 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2025-10-22 18:52:18,546 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2025-10-22 18:52:18,546 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-otel
+2025-10-22 18:52:18,546 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2025-10-22 18:52:18,546 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2025-10-22 18:52:18,546 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2025-10-22 18:52:18,547 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token providers loaded successfully
+2025-10-22 18:52:18,549 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+2025-10-22 18:52:18,553 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+2025-10-22 18:52:18,554 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+2025-10-22 18:52:18,555 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2025-10-22 18:52:18,555 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2025-10-22 18:52:18,556 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2025-10-22 18:52:18,556 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2025-10-22 18:52:18,556 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2025-10-22 18:52:18,556 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-otel
+2025-10-22 18:52:18,557 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2025-10-22 18:52:18,557 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2025-10-22 18:52:18,558 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2025-10-22 18:52:18,558 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+2025-10-22 18:52:18,558 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Checking provider and receiver instances consistency
+2025-10-22 18:52:18,558 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Provider and receiver instances are consistent
+2025-10-22 18:52:18,559 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Obtaining delegation tokens
+2025-10-22 18:52:18,561 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation tokens obtained successfully
+2025-10-22 18:52:18,561 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping notifications
+2025-10-22 18:52:18,594 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Created BLOB server storage directory /tmp/jm_f017bf131a5f7a6cc25bd4ef572cf457/blobStorage
+2025-10-22 18:52:18,604 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Started BLOB server at 0.0.0.0:6124 - max concurrent requests: 50 - max backlog: 1000
+2025-10-22 18:52:18,654 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No metrics reporter configured, no metrics will be exposed/reported.
+2025-10-22 18:52:18,654 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No trace reporter configured, no traces will be exposed/reported.
+2025-10-22 18:52:18,654 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No event reporter configured, no events will be exposed/reported.
+2025-10-22 18:52:18,663 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address 9c8e0f315e50:0, bind address 0.0.0.0:0.
+2025-10-22 18:52:18,699 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+2025-10-22 18:52:18,704 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2025-10-22 18:52:18,705 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+2025-10-22 18:52:18,729 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink-metrics@9c8e0f315e50:34921]
+2025-10-22 18:52:18,747 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink-metrics@9c8e0f315e50:34921
+2025-10-22 18:52:18,766 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at pekko://flink-metrics/user/rpc/MetricQueryService .
+2025-10-22 18:52:18,992 INFO  org.apache.flink.runtime.dispatcher.FileExecutionGraphInfoStore [] - Initializing FileExecutionGraphInfoStore: Storage directory /tmp/executionGraphStore-6915183e-fb07-4cca-b085-43cb2192ded8, expiration time 3600000, maximum cache size 52428800 bytes.
+2025-10-22 18:52:19,089 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Upload directory /tmp/flink-web-d55cba96-a00e-4885-8f28-909e8c267e22/flink-web-upload does not exist. 
+2025-10-22 18:52:19,090 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Created directory /tmp/flink-web-d55cba96-a00e-4885-8f28-909e8c267e22/flink-web-upload for file uploads.
+2025-10-22 18:52:19,092 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Starting rest endpoint.
+2025-10-22 18:52:19,633 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component log file: /opt/flink/log/flink--standalonesession-0-9c8e0f315e50.log
+2025-10-22 18:52:19,634 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component stdout file: /opt/flink/log/flink--standalonesession-0-9c8e0f315e50.out
+2025-10-22 18:52:19,661 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Rest endpoint listening at 127.0.0.1:8081
+2025-10-22 18:52:19,666 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - http://127.0.0.1:8081 was granted leadership with leaderSessionID=00000000-0000-0000-0000-000000000000
+2025-10-22 18:52:19,667 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Web frontend listening at http://127.0.0.1:8081.
+2025-10-22 18:52:19,707 INFO  org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherRunner [] - DefaultDispatcherRunner was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new DispatcherLeaderProcess.
+2025-10-22 18:52:19,720 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Start SessionDispatcherLeaderProcess.
+2025-10-22 18:52:19,729 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Starting resource manager service.
+2025-10-22 18:52:19,731 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Resource manager service is granted leadership with session id 00000000-0000-0000-0000-000000000000.
+2025-10-22 18:52:19,741 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Recover all persisted job graphs that are not finished, yet.
+2025-10-22 18:52:19,742 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Successfully recovered 0 persisted job graphs.
+2025-10-22 18:52:19,807 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at pekko://flink/user/rpc/dispatcher_0 .
+2025-10-22 18:52:19,816 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at pekko://flink/user/rpc/resourcemanager_1 .
+2025-10-22 18:52:19,857 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Starting the resource manager.
+2025-10-22 18:52:19,871 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Starting the slot manager.
+2025-10-22 18:52:19,879 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Starting tokens update task
+2025-10-22 18:52:19,881 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping notifications
+2025-10-22 18:52:19,882 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Tokens update task not started because either no tokens obtained or none of the tokens specified its renewal date
+2025-10-22 18:52:23,550 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering TaskManager with ResourceID 127.0.0.1:33257-6a9dcf (pekko.tcp://flink@127.0.0.1:33257/user/rpc/taskmanager_0) at ResourceManager
+2025-10-22 18:52:23,587 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Registering task executor 127.0.0.1:33257-6a9dcf under cb6c5f193fa48024d77262a1780c4423 at the slot manager.
+2025-10-22 18:52:32,638 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received job submission 'Word Counter' (abbd29f6c7681cf25245582790a22d7c).
+2025-10-22 18:52:32,641 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'Word Counter' (abbd29f6c7681cf25245582790a22d7c).
+2025-10-22 18:52:32,883 INFO  org.apache.flink.runtime.jobmaster.JobMasterServiceLeadershipRunner [] - JobMasterServiceLeadershipRunner for job abbd29f6c7681cf25245582790a22d7c was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new JobMasterServiceProcess.
+2025-10-22 18:52:32,904 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at pekko://flink/user/rpc/jobmanager_2 .
+2025-10-22 18:52:32,922 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'Word Counter' (abbd29f6c7681cf25245582790a22d7c).
+2025-10-22 18:52:33,113 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy ExponentialDelayRestartBackoffTimeStrategy(initialBackoffMS=1000, maxBackoffMS=60000, backoffMultiplier=1.5, resetBackoffThresholdMS=3600000, jitterFactor=0.1, attemptsBeforeResetBackoff=2147483647, currentRestartAttempt=0, nextRestartTimestamp=-2147483648) for Word Counter (abbd29f6c7681cf25245582790a22d7c).
+2025-10-22 18:52:33,231 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Created execution graph 8329131f71f444cf20a04460f8dbd2f6 for job abbd29f6c7681cf25245582790a22d7c.
+2025-10-22 18:52:33,260 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job Word Counter (abbd29f6c7681cf25245582790a22d7c).
+2025-10-22 18:52:33,268 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 8 ms.
+2025-10-22 18:52:33,305 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 new pipelined regions in 0 ms, total 1 pipelined regions currently.
+2025-10-22 18:52:33,312 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Loading state backend via factory org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackendFactory
+2025-10-22 18:52:33,341 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Using predefined options: DEFAULT.
+2025-10-22 18:52:33,346 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as EmbeddedRocksDBStateBackend
+2025-10-22 18:52:33,350 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'filesystem': (checkpoints "file:/tmp/flink-checkpoints")
+2025-10-22 18:52:33,363 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+2025-10-22 18:52:33,367 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.RestartPipelinedRegionFailoverStrategy@68899968 for Word Counter (abbd29f6c7681cf25245582790a22d7c).
+2025-10-22 18:52:33,380 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'Word Counter' (abbd29f6c7681cf25245582790a22d7c) under job master id 00000000000000000000000000000000.
+2025-10-22 18:52:33,384 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2025-10-22 18:52:33,385 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Word Counter (abbd29f6c7681cf25245582790a22d7c) switched from state CREATED to RUNNING.
+2025-10-22 18:52:33,388 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (8329131f71f444cf20a04460f8dbd2f6_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CREATED to SCHEDULED.
+2025-10-22 18:52:33,389 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (8329131f71f444cf20a04460f8dbd2f6_90bea66de1c231edf33913ecd54406c1_0_0) switched from CREATED to SCHEDULED.
+2025-10-22 18:52:33,404 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager pekko.tcp://flink@9c8e0f315e50:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000)
+2025-10-22 18:52:33,409 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+2025-10-22 18:52:33,411 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager 00000000000000000000000000000000@pekko.tcp://flink@9c8e0f315e50:6123/user/rpc/jobmanager_2 for job abbd29f6c7681cf25245582790a22d7c.
+2025-10-22 18:52:33,418 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager 00000000000000000000000000000000@pekko.tcp://flink@9c8e0f315e50:6123/user/rpc/jobmanager_2 for job abbd29f6c7681cf25245582790a22d7c.
+2025-10-22 18:52:33,422 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: 00000000000000000000000000000000.
+2025-10-22 18:52:33,428 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Received resource requirements from job abbd29f6c7681cf25245582790a22d7c: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+2025-10-22 18:52:33,501 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Matching resource requirements against available resources.
+Missing resources:
+	 Job abbd29f6c7681cf25245582790a22d7c
+		ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}
+Current resources:
+	TaskManager 127.0.0.1:33257-6a9dcf
+		Available: ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}
+		Total:     ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}
+2025-10-22 18:52:33,508 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DefaultSlotStatusSyncer [] - Starting allocation of slot 76411d8d7a7403033fdeac6dd4519674 from 127.0.0.1:33257-6a9dcf for job abbd29f6c7681cf25245582790a22d7c with resource profile ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}.
+2025-10-22 18:52:33,781 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (8329131f71f444cf20a04460f8dbd2f6_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from SCHEDULED to DEPLOYING.
+2025-10-22 18:52:33,783 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Source: Collection Source -> _stream_key_by_map_operator (1/1) (attempt #0) with attempt id 8329131f71f444cf20a04460f8dbd2f6_cbc357ccb763df2852fee8c4fc7d55f2_0_0 and vertex id cbc357ccb763df2852fee8c4fc7d55f2_0 to 127.0.0.1:33257-6a9dcf @ localhost (dataPort=44105) with allocation id 76411d8d7a7403033fdeac6dd4519674
+2025-10-22 18:52:33,796 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (8329131f71f444cf20a04460f8dbd2f6_90bea66de1c231edf33913ecd54406c1_0_0) switched from SCHEDULED to DEPLOYING.
+2025-10-22 18:52:33,797 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying KEYED PROCESS -> Sink: Print to Std. Out (1/1) (attempt #0) with attempt id 8329131f71f444cf20a04460f8dbd2f6_90bea66de1c231edf33913ecd54406c1_0_0 and vertex id 90bea66de1c231edf33913ecd54406c1_0 to 127.0.0.1:33257-6a9dcf @ localhost (dataPort=44105) with allocation id 76411d8d7a7403033fdeac6dd4519674
+2025-10-22 18:52:34,120 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job abbd29f6c7681cf25245582790a22d7c since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job abbd29f6c7681cf25245582790a22d7c is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 18:52:34,365 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (8329131f71f444cf20a04460f8dbd2f6_90bea66de1c231edf33913ecd54406c1_0_0) switched from DEPLOYING to INITIALIZING.
+2025-10-22 18:52:34,369 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (8329131f71f444cf20a04460f8dbd2f6_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from DEPLOYING to INITIALIZING.
+2025-10-22 18:52:35,106 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job abbd29f6c7681cf25245582790a22d7c since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job abbd29f6c7681cf25245582790a22d7c is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 18:52:36,105 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job abbd29f6c7681cf25245582790a22d7c since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job abbd29f6c7681cf25245582790a22d7c is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 18:52:37,103 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job abbd29f6c7681cf25245582790a22d7c since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job abbd29f6c7681cf25245582790a22d7c is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 18:52:38,102 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job abbd29f6c7681cf25245582790a22d7c since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job abbd29f6c7681cf25245582790a22d7c is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 18:52:39,102 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job abbd29f6c7681cf25245582790a22d7c since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job abbd29f6c7681cf25245582790a22d7c is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 18:52:40,044 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (8329131f71f444cf20a04460f8dbd2f6_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from INITIALIZING to RUNNING.
+2025-10-22 18:52:40,045 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (8329131f71f444cf20a04460f8dbd2f6_90bea66de1c231edf33913ecd54406c1_0_0) switched from INITIALIZING to RUNNING.
+2025-10-22 18:52:40,113 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 1 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761159160102 for job abbd29f6c7681cf25245582790a22d7c.
+2025-10-22 18:52:43,270 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Completed checkpoint 1 for job abbd29f6c7681cf25245582790a22d7c (37938 bytes, checkpointDuration=3161 ms, finalizationTime=7 ms).
+2025-10-22 18:52:43,279 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 2177
+2025-10-22 18:52:43,282 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 2 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761159163279 for job abbd29f6c7681cf25245582790a22d7c.
+2025-10-22 18:52:50,504 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Triggering savepoint for job abbd29f6c7681cf25245582790a22d7c.
+2025-10-22 18:52:50,513 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 3 (type=SavepointType{name='Savepoint', postCheckpointAction=NONE, formatType=NATIVE}) @ 1761159170512 for job abbd29f6c7681cf25245582790a22d7c.
+2025-10-22 18:53:01,663 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Completed checkpoint 2 for job abbd29f6c7681cf25245582790a22d7c (157108 bytes, checkpointDuration=18377 ms, finalizationTime=7 ms).
+2025-10-22 18:53:02,820 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Completed checkpoint 3 for job abbd29f6c7681cf25245582790a22d7c (171529 bytes, checkpointDuration=12307 ms, finalizationTime=0 ms).
+2025-10-22 18:53:02,824 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 20716
+2025-10-22 18:53:02,826 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 4 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761159182824 for job abbd29f6c7681cf25245582790a22d7c.
+2025-10-22 18:53:14,949 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received job submission 'Word Counter' (f9660df6bf00118ef3fa143963130a04).
+2025-10-22 18:53:14,950 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'Word Counter' (f9660df6bf00118ef3fa143963130a04).
+2025-10-22 18:53:15,011 INFO  org.apache.flink.runtime.jobmaster.JobMasterServiceLeadershipRunner [] - JobMasterServiceLeadershipRunner for job f9660df6bf00118ef3fa143963130a04 was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new JobMasterServiceProcess.
+2025-10-22 18:53:15,018 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at pekko://flink/user/rpc/jobmanager_3 .
+2025-10-22 18:53:15,018 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'Word Counter' (f9660df6bf00118ef3fa143963130a04).
+2025-10-22 18:53:15,073 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy ExponentialDelayRestartBackoffTimeStrategy(initialBackoffMS=1000, maxBackoffMS=60000, backoffMultiplier=1.5, resetBackoffThresholdMS=3600000, jitterFactor=0.1, attemptsBeforeResetBackoff=2147483647, currentRestartAttempt=0, nextRestartTimestamp=-2147483648) for Word Counter (f9660df6bf00118ef3fa143963130a04).
+2025-10-22 18:53:15,076 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Created execution graph 37b2ec7e7c3cd86807fd278700389086 for job f9660df6bf00118ef3fa143963130a04.
+2025-10-22 18:53:15,077 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job Word Counter (f9660df6bf00118ef3fa143963130a04).
+2025-10-22 18:53:15,082 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 5 ms.
+2025-10-22 18:53:15,085 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 new pipelined regions in 0 ms, total 1 pipelined regions currently.
+2025-10-22 18:53:15,086 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Loading state backend via factory org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackendFactory
+2025-10-22 18:53:15,086 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Using predefined options: DEFAULT.
+2025-10-22 18:53:15,089 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as EmbeddedRocksDBStateBackend
+2025-10-22 18:53:15,090 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'filesystem': (checkpoints "file:/tmp/flink-checkpoints")
+2025-10-22 18:53:15,093 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+2025-10-22 18:53:15,094 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Starting job f9660df6bf00118ef3fa143963130a04 from savepoint /tmp/flink-checkpoints/savepoint-abbd29-be148e5c5848 ()
+2025-10-22 18:53:15,109 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Reset the checkpoint ID of job f9660df6bf00118ef3fa143963130a04 to 4.
+2025-10-22 18:53:15,114 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Restoring job f9660df6bf00118ef3fa143963130a04 from Savepoint 3 @ 0 for f9660df6bf00118ef3fa143963130a04 located at file:/tmp/flink-checkpoints/savepoint-abbd29-be148e5c5848.
+2025-10-22 18:53:15,151 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No master state to restore
+2025-10-22 18:53:15,153 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.RestartPipelinedRegionFailoverStrategy@2388287b for Word Counter (f9660df6bf00118ef3fa143963130a04).
+2025-10-22 18:53:15,158 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'Word Counter' (f9660df6bf00118ef3fa143963130a04) under job master id 00000000000000000000000000000000.
+2025-10-22 18:53:15,161 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2025-10-22 18:53:15,162 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Word Counter (f9660df6bf00118ef3fa143963130a04) switched from state CREATED to RUNNING.
+2025-10-22 18:53:15,165 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (37b2ec7e7c3cd86807fd278700389086_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CREATED to SCHEDULED.
+2025-10-22 18:53:15,166 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (37b2ec7e7c3cd86807fd278700389086_90bea66de1c231edf33913ecd54406c1_0_0) switched from CREATED to SCHEDULED.
+2025-10-22 18:53:15,167 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager pekko.tcp://flink@9c8e0f315e50:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000)
+2025-10-22 18:53:15,173 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job f9660df6bf00118ef3fa143963130a04 since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job f9660df6bf00118ef3fa143963130a04 is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 18:53:15,182 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+2025-10-22 18:53:15,182 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager 00000000000000000000000000000000@pekko.tcp://flink@9c8e0f315e50:6123/user/rpc/jobmanager_3 for job f9660df6bf00118ef3fa143963130a04.
+2025-10-22 18:53:15,192 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager 00000000000000000000000000000000@pekko.tcp://flink@9c8e0f315e50:6123/user/rpc/jobmanager_3 for job f9660df6bf00118ef3fa143963130a04.
+2025-10-22 18:53:15,198 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: 00000000000000000000000000000000.
+2025-10-22 18:53:15,199 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Received resource requirements from job f9660df6bf00118ef3fa143963130a04: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+2025-10-22 18:53:15,269 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Matching resource requirements against available resources.
+Missing resources:
+	 Job f9660df6bf00118ef3fa143963130a04
+		ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}
+Current resources:
+	TaskManager 127.0.0.1:33257-6a9dcf
+		Available: ResourceProfile{cpuCores=0, taskHeapMemory=0 bytes, taskOffHeapMemory=0 bytes, managedMemory=0 bytes, networkMemory=0 bytes}
+		Total:     ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}

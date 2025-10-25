@@ -17,3 +17,4 @@ tmpdb
 .bak/
 *.bak
 swap_sst_last5
+update-git.sh

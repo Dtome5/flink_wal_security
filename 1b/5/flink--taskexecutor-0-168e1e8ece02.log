@@ -1,0 +1,333 @@
+2025-10-23 07:28:54,508 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+2025-10-23 07:28:54,510 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Preconfiguration: 
+2025-10-23 07:28:54,511 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - 
+
+
+RESOURCE_PARAMS extraction logs:
+jvm_params: -Xmx536870902 -Xms536870902 -XX:MaxDirectMemorySize=268435458 -XX:MaxMetaspaceSize=268435456
+dynamic_configs: -D taskmanager.memory.network.min=134217730b -D taskmanager.cpu.cores=1.0 -D taskmanager.memory.task.off-heap.size=0b -D taskmanager.memory.jvm-metaspace.size=268435456b -D external-resources=none -D taskmanager.memory.jvm-overhead.min=201326592b -D taskmanager.memory.framework.off-heap.size=134217728b -D taskmanager.memory.network.max=134217730b -D taskmanager.memory.framework.heap.size=134217728b -D taskmanager.memory.managed.size=536870920b -D taskmanager.memory.task.heap.size=402653174b -D taskmanager.numberOfTaskSlots=1 -D taskmanager.memory.jvm-overhead.max=201326592b
+logs: INFO  [] - Using standard YAML parser to load flink configuration file from /opt/flink/conf/config.yaml.
+INFO  [] - Loading configuration property: blob.server.port, 6124
+INFO  [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+INFO  [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+INFO  [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+INFO  [] - Loading configuration property: jobmanager.rpc.address, 168e1e8ece02
+INFO  [] - Loading configuration property: execution.checkpointing.incremental, false
+INFO  [] - Loading configuration property: state.backend.rocksdb.localdir, /tmp/rocksdb
+INFO  [] - Loading configuration property: execution.target, remote
+INFO  [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+INFO  [] - Loading configuration property: jobmanager.rpc.port, 6123
+INFO  [] - Loading configuration property: query.server.port, 6125
+INFO  [] - Loading configuration property: rest.bind-address, 0.0.0.0
+INFO  [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+INFO  [] - Loading configuration property: execution.checkpointing.savepoint-dir, file:///tmp/flink-checkpoints
+INFO  [] - Loading configuration property: taskmanager.host, 127.0.0.1
+INFO  [] - Loading configuration property: execution.checkpointing.externalized-checkpoint-retention, RETAIN_ON_CANCELLATION
+INFO  [] - Loading configuration property: parallelism.default, 1
+INFO  [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+INFO  [] - Loading configuration property: execution.checkpointing.local-backup.enabled, true
+INFO  [] - Loading configuration property: rest.address, 127.0.0.1
+INFO  [] - Loading configuration property: execution.state-recovery.ignore-unclaimed-state, true
+INFO  [] - Loading configuration property: execution.checkpointing.dir, file:///tmp/flink-checkpoints
+INFO  [] - Loading configuration property: env.java.opts.all, --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+INFO  [] - Loading configuration property: state.backend.type, rocksdb
+INFO  [] - The derived from fraction jvm overhead memory (172.800mb (181193935 bytes)) is less than its min value 192.000mb (201326592 bytes), min value will be used instead
+INFO  [] - Final TaskExecutor Memory configuration:
+INFO  [] -   Total Process Memory:          1.688gb (1811939328 bytes)
+INFO  [] -     Total Flink Memory:          1.250gb (1342177280 bytes)
+INFO  [] -       Total JVM Heap Memory:     512.000mb (536870902 bytes)
+INFO  [] -         Framework:               128.000mb (134217728 bytes)
+INFO  [] -         Task:                    384.000mb (402653174 bytes)
+INFO  [] -       Total Off-heap Memory:     768.000mb (805306378 bytes)
+INFO  [] -         Managed:                 512.000mb (536870920 bytes)
+INFO  [] -         Total JVM Direct Memory: 256.000mb (268435458 bytes)
+INFO  [] -           Framework:             128.000mb (134217728 bytes)
+INFO  [] -           Task:                  0 bytes
+INFO  [] -           Network:               128.000mb (134217730 bytes)
+INFO  [] -     JVM Metaspace:               256.000mb (268435456 bytes)
+INFO  [] -     JVM Overhead:                192.000mb (201326592 bytes)
+
+2025-10-23 07:28:54,511 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+2025-10-23 07:28:54,522 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Starting TaskManager (Version: 2.1.0, Scala: 2.12, Rev:4cb6bd3, Date:2025-07-21T13:23:51+02:00)
+2025-10-23 07:28:54,523 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  OS current user: flink
+2025-10-23 07:28:54,523 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+2025-10-23 07:28:54,523 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JVM: OpenJDK 64-Bit Server VM - Eclipse Adoptium - 17/17.0.16+8
+2025-10-23 07:28:54,523 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Arch: amd64
+2025-10-23 07:28:54,530 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Maximum heap size: 512 MiBytes
+2025-10-23 07:28:54,531 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JAVA_HOME: /opt/java/openjdk
+2025-10-23 07:28:54,531 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  No Hadoop Dependency available
+2025-10-23 07:28:54,531 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JVM Options:
+2025-10-23 07:28:54,531 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Xmx536870902
+2025-10-23 07:28:54,531 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Xms536870902
+2025-10-23 07:28:54,531 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:MaxDirectMemorySize=268435458
+2025-10-23 07:28:54,531 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:MaxMetaspaceSize=268435456
+2025-10-23 07:28:54,531 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:+IgnoreUnrecognizedVMOptions
+2025-10-23 07:28:54,531 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED
+2025-10-23 07:28:54,531 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+2025-10-23 07:28:54,532 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.lang=ALL-UNNAMED
+2025-10-23 07:28:54,532 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.net=ALL-UNNAMED
+2025-10-23 07:28:54,532 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.io=ALL-UNNAMED
+2025-10-23 07:28:54,532 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.nio=ALL-UNNAMED
+2025-10-23 07:28:54,532 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+2025-10-23 07:28:54,532 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+2025-10-23 07:28:54,532 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.text=ALL-UNNAMED
+2025-10-23 07:28:54,532 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.time=ALL-UNNAMED
+2025-10-23 07:28:54,532 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.util=ALL-UNNAMED
+2025-10-23 07:28:54,532 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+2025-10-23 07:28:54,532 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+2025-10-23 07:28:54,534 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+2025-10-23 07:28:54,534 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog.file=/opt/flink/log/flink--taskexecutor-0-168e1e8ece02.log
+2025-10-23 07:28:54,534 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog4j.configuration=file:/opt/flink/conf/log4j.properties
+2025-10-23 07:28:54,534 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog4j.configurationFile=file:/opt/flink/conf/log4j.properties
+2025-10-23 07:28:54,534 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlogback.configurationFile=file:/opt/flink/conf/logback.xml
+2025-10-23 07:28:54,534 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Program Arguments:
+2025-10-23 07:28:54,536 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --configDir
+2025-10-23 07:28:54,536 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     /opt/flink/conf
+2025-10-23 07:28:54,537 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-10-23 07:28:54,537 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.network.min=134217730b
+2025-10-23 07:28:54,537 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-10-23 07:28:54,537 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.cpu.cores=1.0
+2025-10-23 07:28:54,537 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-10-23 07:28:54,538 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.task.off-heap.size=0b
+2025-10-23 07:28:54,538 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-10-23 07:28:54,538 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-metaspace.size=268435456b
+2025-10-23 07:28:54,538 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-10-23 07:28:54,538 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     external-resources=none
+2025-10-23 07:28:54,538 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-10-23 07:28:54,539 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-overhead.min=201326592b
+2025-10-23 07:28:54,539 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-10-23 07:28:54,540 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.framework.off-heap.size=134217728b
+2025-10-23 07:28:54,540 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-10-23 07:28:54,540 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.network.max=134217730b
+2025-10-23 07:28:54,540 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-10-23 07:28:54,540 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.framework.heap.size=134217728b
+2025-10-23 07:28:54,540 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-10-23 07:28:54,540 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.managed.size=536870920b
+2025-10-23 07:28:54,540 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-10-23 07:28:54,541 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.task.heap.size=402653174b
+2025-10-23 07:28:54,541 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-10-23 07:28:54,541 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.numberOfTaskSlots=1
+2025-10-23 07:28:54,541 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-10-23 07:28:54,541 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-overhead.max=201326592b
+2025-10-23 07:28:54,541 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Classpath: /opt/flink/lib/flink-cep-2.1.0.jar:/opt/flink/lib/flink-connector-files-2.1.0.jar:/opt/flink/lib/flink-csv-2.1.0.jar:/opt/flink/lib/flink-json-2.1.0.jar:/opt/flink/lib/flink-scala_2.12-2.1.0.jar:/opt/flink/lib/flink-table-api-java-uber-2.1.0.jar:/opt/flink/lib/flink-table-planner-loader-2.1.0.jar:/opt/flink/lib/flink-table-runtime-2.1.0.jar:/opt/flink/lib/log4j-1.2-api-2.24.3.jar:/opt/flink/lib/log4j-api-2.24.3.jar:/opt/flink/lib/log4j-core-2.24.3.jar:/opt/flink/lib/log4j-layout-template-json-2.24.3.jar:/opt/flink/lib/log4j-slf4j-impl-2.24.3.jar:/opt/flink/lib/flink-dist-2.1.0.jar::::
+2025-10-23 07:28:54,541 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+2025-10-23 07:28:54,543 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Registered UNIX signal handlers for [TERM, HUP, INT]
+2025-10-23 07:28:54,559 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Maximum number of open file descriptors is 1048576.
+2025-10-23 07:28:54,565 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Using standard YAML parser to load flink configuration file from /opt/flink/conf/config.yaml.
+2025-10-23 07:28:54,619 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: blob.server.port, 6124
+2025-10-23 07:28:54,619 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+2025-10-23 07:28:54,619 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+2025-10-23 07:28:54,619 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+2025-10-23 07:28:54,619 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, 168e1e8ece02
+2025-10-23 07:28:54,620 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.incremental, false
+2025-10-23 07:28:54,620 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: state.backend.rocksdb.localdir, /tmp/rocksdb
+2025-10-23 07:28:54,620 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.target, remote
+2025-10-23 07:28:54,620 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+2025-10-23 07:28:54,620 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+2025-10-23 07:28:54,620 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: query.server.port, 6125
+2025-10-23 07:28:54,620 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, 0.0.0.0
+2025-10-23 07:28:54,620 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+2025-10-23 07:28:54,621 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.savepoint-dir, file:///tmp/flink-checkpoints
+2025-10-23 07:28:54,621 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.host, 127.0.0.1
+2025-10-23 07:28:54,621 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.externalized-checkpoint-retention, RETAIN_ON_CANCELLATION
+2025-10-23 07:28:54,621 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+2025-10-23 07:28:54,621 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+2025-10-23 07:28:54,622 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.local-backup.enabled, true
+2025-10-23 07:28:54,622 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, 127.0.0.1
+2025-10-23 07:28:54,622 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.state-recovery.ignore-unclaimed-state, true
+2025-10-23 07:28:54,622 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.dir, file:///tmp/flink-checkpoints
+2025-10-23 07:28:54,622 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.all, --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+2025-10-23 07:28:54,622 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: state.backend.type, rocksdb
+2025-10-23 07:28:54,622 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.network.min, 134217730b
+2025-10-23 07:28:54,622 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-metaspace.size, 268435456b
+2025-10-23 07:28:54,622 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.task.off-heap.size, 0b
+2025-10-23 07:28:54,622 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.cpu.cores, 1.0
+2025-10-23 07:28:54,622 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: external-resources, none
+2025-10-23 07:28:54,623 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-overhead.min, 201326592b
+2025-10-23 07:28:54,623 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.framework.off-heap.size, 134217728b
+2025-10-23 07:28:54,623 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.network.max, 134217730b
+2025-10-23 07:28:54,623 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.framework.heap.size, 134217728b
+2025-10-23 07:28:54,623 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.managed.size, 536870920b
+2025-10-23 07:28:54,623 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.task.heap.size, 402653174b
+2025-10-23 07:28:54,623 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.numberOfTaskSlots, 1
+2025-10-23 07:28:54,623 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-overhead.max, 201326592b
+2025-10-23 07:28:54,668 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+2025-10-23 07:28:54,678 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+2025-10-23 07:28:54,681 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+2025-10-23 07:28:54,682 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+2025-10-23 07:28:54,682 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+2025-10-23 07:28:54,682 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+2025-10-23 07:28:54,682 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-otel
+2025-10-23 07:28:54,682 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+2025-10-23 07:28:54,682 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+2025-10-23 07:28:54,682 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+2025-10-23 07:28:54,704 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory,filesystem}.
+2025-10-23 07:28:54,704 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2025-10-23 07:28:54,705 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2025-10-23 07:28:54,705 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2025-10-23 07:28:54,705 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2025-10-23 07:28:54,705 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2025-10-23 07:28:54,705 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-otel
+2025-10-23 07:28:54,705 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2025-10-23 07:28:54,705 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2025-10-23 07:28:54,705 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2025-10-23 07:28:54,707 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory,filesystem}.
+2025-10-23 07:28:54,717 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+2025-10-23 07:28:54,735 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /tmp/jaas-16800826389511735632.conf.
+2025-10-23 07:28:54,742 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+2025-10-23 07:28:54,989 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Using configured hostname/address for TaskManager: 127.0.0.1.
+2025-10-23 07:28:55,048 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address 127.0.0.1:0, bind address 0.0.0.0:0.
+2025-10-23 07:28:55,889 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+2025-10-23 07:28:55,920 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2025-10-23 07:28:55,921 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+2025-10-23 07:28:56,175 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink@127.0.0.1:42553]
+2025-10-23 07:28:56,278 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink@127.0.0.1:42553
+2025-10-23 07:28:56,299 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Using working directory: WorkingDirectory(/tmp/tm_127.0.0.1:42553-513b3c)
+2025-10-23 07:28:56,319 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No metrics reporter configured, no metrics will be exposed/reported.
+2025-10-23 07:28:56,320 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No trace reporter configured, no traces will be exposed/reported.
+2025-10-23 07:28:56,320 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No event reporter configured, no events will be exposed/reported.
+2025-10-23 07:28:56,324 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address 127.0.0.1:0, bind address 0.0.0.0:0.
+2025-10-23 07:28:56,355 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+2025-10-23 07:28:56,360 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2025-10-23 07:28:56,362 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+2025-10-23 07:28:56,387 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink-metrics@127.0.0.1:37693]
+2025-10-23 07:28:56,392 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink-metrics@127.0.0.1:37693
+2025-10-23 07:28:56,409 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at pekko://flink-metrics/user/rpc/MetricQueryService_127.0.0.1:42553-513b3c .
+2025-10-23 07:28:56,425 INFO  org.apache.flink.runtime.blob.PermanentBlobCache             [] - Created BLOB cache storage directory /tmp/tm_127.0.0.1:42553-513b3c/blobStorage
+2025-10-23 07:28:56,429 INFO  org.apache.flink.runtime.blob.TransientBlobCache             [] - Created BLOB cache storage directory /tmp/tm_127.0.0.1:42553-513b3c/blobStorage
+2025-10-23 07:28:56,432 INFO  org.apache.flink.runtime.externalresource.ExternalResourceUtils [] - Enabled external resources: []
+2025-10-23 07:28:56,432 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+2025-10-23 07:28:56,435 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+2025-10-23 07:28:56,436 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+2025-10-23 07:28:56,436 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2025-10-23 07:28:56,436 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2025-10-23 07:28:56,436 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2025-10-23 07:28:56,436 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2025-10-23 07:28:56,436 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2025-10-23 07:28:56,436 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-otel
+2025-10-23 07:28:56,436 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2025-10-23 07:28:56,436 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2025-10-23 07:28:56,436 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2025-10-23 07:28:56,437 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+2025-10-23 07:28:56,437 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Starting TaskManager with ResourceID: 127.0.0.1:42553-513b3c
+2025-10-23 07:28:56,519 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices    [] - Temporary file directory '/tmp': total 31 GB, usable 14 GB (45.16% usable)
+2025-10-23 07:28:56,522 INFO  org.apache.flink.runtime.io.disk.iomanager.IOManager         [] - Created a new FileChannelManager for spilling of task related data to disk (joins, sorting, ...). Used directories:
+	/tmp/flink-io-1da55fb6-fe50-471d-9b74-828f84e4c2c6
+2025-10-23 07:28:56,531 INFO  org.apache.flink.runtime.io.network.netty.NettyConfig        [] - NettyConfig [server address: /0.0.0.0, server port range: 0, ssl enabled: false, memory segment size (bytes): 32768, number of server threads: 1 (manual), number of client threads: 1 (manual), server connect backlog: 0 (use Netty's default), client connect timeout (sec): 120, send/receive buffer size (bytes): 0 (use Netty's default)]
+2025-10-23 07:28:56,543 INFO  org.apache.flink.runtime.io.network.NettyShuffleServiceFactory [] - Created a new FileChannelManager for storing result partitions of BLOCKING shuffles. Used directories:
+	/tmp/flink-netty-shuffle-29b1bb7e-245d-4bcf-b290-0d1f1d4a955f
+2025-10-23 07:28:56,611 INFO  org.apache.flink.runtime.io.network.buffer.NetworkBufferPool [] - Allocated 128 MB for network buffer pool (number of memory segments: 4096, bytes per segment: 32768).
+2025-10-23 07:28:56,622 INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment  [] - Starting the network environment and its components.
+2025-10-23 07:28:56,641 INFO  org.apache.flink.runtime.io.network.netty.NettyClient        [] - Transport type 'auto': using EPOLL.
+2025-10-23 07:28:56,641 INFO  org.apache.flink.runtime.io.network.netty.NettyClient        [] - Successful initialization (took 18 ms).
+2025-10-23 07:28:56,643 INFO  org.apache.flink.runtime.io.network.netty.NettyServer        [] - Transport type 'auto': using EPOLL.
+2025-10-23 07:28:56,646 INFO  org.apache.flink.runtime.io.network.netty.NettyServer        [] - Successful initialization (took 4 ms). Listening on SocketAddress /[0:0:0:0:0:0:0:0%0]:46657.
+2025-10-23 07:28:56,646 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices    [] - TaskManager data connection initialized successfully; listening internally on port: 46657
+2025-10-23 07:28:56,648 INFO  org.apache.flink.runtime.taskexecutor.KvStateService         [] - Starting the kvState service and its components.
+2025-10-23 07:28:56,686 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at pekko://flink/user/rpc/taskmanager_0 .
+2025-10-23 07:28:56,708 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Start job leader service.
+2025-10-23 07:28:56,710 INFO  org.apache.flink.runtime.filecache.FileCache                 [] - User file cache uses directory /tmp/flink-dist-cache-cbbfe253-f647-48e7-9f5d-ca407ae9ece8
+2025-10-23 07:28:56,712 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Connecting to ResourceManager pekko.tcp://flink@168e1e8ece02:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000).
+2025-10-23 07:28:57,130 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Resolved ResourceManager address, beginning registration
+2025-10-23 07:28:57,233 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Successful registration at resource manager pekko.tcp://flink@168e1e8ece02:6123/user/rpc/resourcemanager_* under registration id 7c4691468e8709dee99c81c8c1c938cd.
+2025-10-23 07:29:07,502 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Receive slot request 52154bdd2448c253db566c650c41da50 for job 31030947d7c0ea505b04d99e0b590777 from resource manager with leader id 00000000000000000000000000000000.
+2025-10-23 07:29:07,513 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Allocated slot for 52154bdd2448c253db566c650c41da50 with resources ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}.
+2025-10-23 07:29:07,521 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Add job 31030947d7c0ea505b04d99e0b590777 for job leader monitoring.
+2025-10-23 07:29:07,522 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Try to register at job manager pekko.tcp://flink@168e1e8ece02:6123/user/rpc/jobmanager_2 with leader id 00000000-0000-0000-0000-000000000000.
+2025-10-23 07:29:07,572 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Resolved JobManager address, beginning registration
+2025-10-23 07:29:07,648 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Successful registration at job manager pekko.tcp://flink@168e1e8ece02:6123/user/rpc/jobmanager_2 for job 31030947d7c0ea505b04d99e0b590777.
+2025-10-23 07:29:07,650 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Establish JobManager connection for job 31030947d7c0ea505b04d99e0b590777.
+2025-10-23 07:29:07,657 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Offer reserved slots to the leader of job 31030947d7c0ea505b04d99e0b590777.
+2025-10-23 07:29:07,752 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 52154bdd2448c253db566c650c41da50.
+2025-10-23 07:29:07,808 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - Creating a changelog storage with name 'memory'.
+2025-10-23 07:29:07,822 INFO  org.apache.flink.runtime.state.TaskExecutorChannelStateExecutorFactoryManager [] - Creating the channel state executor factory for job id 31030947d7c0ea505b04d99e0b590777
+2025-10-23 07:29:07,859 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Source: Collection Source -> _stream_key_by_map_operator (1/1)#0 (3bef0a915c9efb21b7bcc27492d6c334_cbc357ccb763df2852fee8c4fc7d55f2_0_0), deploy into slot with allocation id 52154bdd2448c253db566c650c41da50.
+2025-10-23 07:29:07,862 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Collection Source -> _stream_key_by_map_operator (1/1)#0 (3bef0a915c9efb21b7bcc27492d6c334_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CREATED to DEPLOYING.
+2025-10-23 07:29:07,872 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Source: Collection Source -> _stream_key_by_map_operator (1/1)#0 (3bef0a915c9efb21b7bcc27492d6c334_cbc357ccb763df2852fee8c4fc7d55f2_0_0) [DEPLOYING].
+2025-10-23 07:29:07,873 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 52154bdd2448c253db566c650c41da50.
+2025-10-23 07:29:07,873 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 52154bdd2448c253db566c650c41da50.
+2025-10-23 07:29:07,884 INFO  org.apache.flink.runtime.blob.BlobClient                     [] - Downloading 31030947d7c0ea505b04d99e0b590777/p-eb2d28ac31e2c97dd63a6894758ee2d5f438b095-878c1ca912c0ffcc33e58076363137f3 from 168e1e8ece02/172.17.0.2:6124
+2025-10-23 07:29:07,928 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 (3bef0a915c9efb21b7bcc27492d6c334_90bea66de1c231edf33913ecd54406c1_0_0), deploy into slot with allocation id 52154bdd2448c253db566c650c41da50.
+2025-10-23 07:29:07,933 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 (3bef0a915c9efb21b7bcc27492d6c334_90bea66de1c231edf33913ecd54406c1_0_0) switched from CREATED to DEPLOYING.
+2025-10-23 07:29:07,935 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 (3bef0a915c9efb21b7bcc27492d6c334_90bea66de1c231edf33913ecd54406c1_0_0) [DEPLOYING].
+2025-10-23 07:29:08,273 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Loading state backend via factory org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackendFactory
+2025-10-23 07:29:08,308 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Loading state backend via factory org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackendFactory
+2025-10-23 07:29:08,330 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Using predefined options: DEFAULT.
+2025-10-23 07:29:08,332 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Using predefined options: DEFAULT.
+2025-10-23 07:29:08,358 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as EmbeddedRocksDBStateBackend
+2025-10-23 07:29:08,361 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as EmbeddedRocksDBStateBackend
+2025-10-23 07:29:08,371 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'filesystem': (checkpoints "file:/tmp/flink-checkpoints")
+2025-10-23 07:29:08,375 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'filesystem': (checkpoints "file:/tmp/flink-checkpoints")
+2025-10-23 07:29:08,390 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Collection Source -> _stream_key_by_map_operator (1/1)#0 (3bef0a915c9efb21b7bcc27492d6c334_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from DEPLOYING to INITIALIZING.
+2025-10-23 07:29:08,391 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 (3bef0a915c9efb21b7bcc27492d6c334_90bea66de1c231edf33913ecd54406c1_0_0) switched from DEPLOYING to INITIALIZING.
+2025-10-23 07:29:08,554 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - Loading state backend via factory org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackendFactory
+2025-10-23 07:29:08,556 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Using predefined options: DEFAULT.
+2025-10-23 07:29:08,561 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - Loading state backend via factory org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackendFactory
+2025-10-23 07:29:08,562 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Using predefined options: DEFAULT.
+2025-10-23 07:29:08,597 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - Loading state backend via factory org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackendFactory
+2025-10-23 07:29:08,600 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Using predefined options: DEFAULT.
+2025-10-23 07:29:08,607 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Attempting to load RocksDB native library and store it under '/tmp/tm_127.0.0.1:42553-513b3c/tmp'
+2025-10-23 07:29:08,627 INFO  org.apache.flink.streaming.api.operators.AbstractStreamOperator [] - The maximum bundle size is configured to 1000.
+2025-10-23 07:29:08,628 INFO  org.apache.flink.streaming.api.operators.AbstractStreamOperator [] - The maximum bundle time is configured to 1000 milliseconds.
+2025-10-23 07:29:08,862 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Successfully loaded RocksDB native library
+2025-10-23 07:29:08,870 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Getting shared memory for RocksDB: shareScope=SLOT, managed=false
+2025-10-23 07:29:08,876 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Obtained shared RocksDB cache of size 375809644 bytes
+2025-10-23 07:29:08,945 INFO  org.apache.flink.state.rocksdb.sstmerge.RocksDBManualCompactionManager [] - Creating RocksDBManualCompactionManager with settings: RocksDBManualCompactionConfig{minInterval=0, maxManualCompactions=5, maxFileSizeToCompact=50 kb, minFilesToCompact=5, maxFilesToCompact=30, maxOutputFileSize=64 mb, maxAutoCompactions=30}
+2025-10-23 07:29:08,948 INFO  org.apache.flink.state.rocksdb.RocksDBKeyedStateBackendBuilder [] - Finished building RocksDB keyed state-backend at /tmp/rocksdb/job_31030947d7c0ea505b04d99e0b590777_op_ExternalPythonKeyedProcessOperator_90bea66de1c231edf33913ecd54406c1__1_1__uuid_a56865bc-5748-4662-be1b-73754ddc6d0a.
+2025-10-23 07:29:08,969 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Using standard YAML parser to load flink configuration file from /opt/flink/conf/config.yaml.
+2025-10-23 07:29:08,977 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: blob.server.port, 6124
+2025-10-23 07:29:08,978 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+2025-10-23 07:29:08,979 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+2025-10-23 07:29:08,979 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+2025-10-23 07:29:08,979 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, 168e1e8ece02
+2025-10-23 07:29:08,979 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.incremental, false
+2025-10-23 07:29:08,979 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: state.backend.rocksdb.localdir, /tmp/rocksdb
+2025-10-23 07:29:08,979 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.target, remote
+2025-10-23 07:29:08,979 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+2025-10-23 07:29:08,979 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+2025-10-23 07:29:08,980 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: query.server.port, 6125
+2025-10-23 07:29:08,981 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, 0.0.0.0
+2025-10-23 07:29:08,981 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+2025-10-23 07:29:08,981 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.savepoint-dir, file:///tmp/flink-checkpoints
+2025-10-23 07:29:08,981 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.host, 127.0.0.1
+2025-10-23 07:29:08,981 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.externalized-checkpoint-retention, RETAIN_ON_CANCELLATION
+2025-10-23 07:29:08,981 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+2025-10-23 07:29:08,981 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+2025-10-23 07:29:08,982 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.local-backup.enabled, true
+2025-10-23 07:29:08,982 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, 127.0.0.1
+2025-10-23 07:29:08,982 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.state-recovery.ignore-unclaimed-state, true
+2025-10-23 07:29:08,982 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.dir, file:///tmp/flink-checkpoints
+2025-10-23 07:29:08,983 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.all, --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+2025-10-23 07:29:08,983 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: state.backend.type, rocksdb
+2025-10-23 07:29:08,993 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - Loading state backend via factory org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackendFactory
+2025-10-23 07:29:08,994 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Using predefined options: DEFAULT.
+2025-10-23 07:29:09,004 INFO  org.apache.flink.streaming.api.operators.AbstractStreamOperator [] - The maximum bundle size is configured to 1000.
+2025-10-23 07:29:09,007 INFO  org.apache.flink.streaming.api.operators.AbstractStreamOperator [] - The maximum bundle time is configured to 1000 milliseconds.
+2025-10-23 07:29:09,017 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - Loading state backend via factory org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackendFactory
+2025-10-23 07:29:09,018 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Using predefined options: DEFAULT.
+2025-10-23 07:29:09,050 INFO  org.apache.flink.python.env.AbstractPythonEnvironmentManager [] - PYTHONPATH of python worker: null
+2025-10-23 07:29:09,053 INFO  org.apache.flink.python.env.AbstractPythonEnvironmentManager [] - Python interpreter path: /app/.venv/bin/python
+2025-10-23 07:29:10,172 INFO  org.apache.flink.streaming.api.runners.python.beam.BeamPythonFunctionRunner [] - Obtained shared Python process of size 161061276 bytes
+2025-10-23 07:29:10,173 INFO  org.apache.flink.streaming.api.runners.python.beam.BeamPythonFunctionRunner [] - Obtained shared Python process of size 161061276 bytes
+2025-10-23 07:29:13,273 INFO  org.apache.beam.runners.fnexecution.logging.GrpcLoggingService [] - Beam Fn Logging client connected.
+2025-10-23 07:29:13,282 INFO  /app/.venv/lib/python3.9/site-packages/apache_beam/runners/worker/sdk_worker_main.py:84 [] - Logging handler created.
+2025-10-23 07:29:13,282 INFO  /app/.venv/lib/python3.9/site-packages/apache_beam/runners/worker/sdk_worker_main.py:110 [] - semi_persistent_directory: /tmp
+2025-10-23 07:29:13,283 WARN  /app/.venv/lib/python3.9/site-packages/apache_beam/runners/worker/sdk_worker_main.py:356 [] - No session file found: /tmp/staged/pickled_main_session. Functions defined in __main__ (interactive session) may fail. 
+2025-10-23 07:29:13,285 WARN  /app/.venv/lib/python3.9/site-packages/apache_beam/options/pipeline_options.py:394 [] - Discarding unparseable args: ['--app_name=BeamPythonFunctionRunner', '--options_id=0.0'] 
+2025-10-23 07:29:13,286 INFO  /app/.venv/lib/python3.9/site-packages/apache_beam/runners/worker/sdk_worker_main.py:134 [] - Pipeline_options: {'experiments': ['state_cache_size=1000']}
+2025-10-23 07:29:13,288 INFO  /app/.venv/lib/python3.9/site-packages/apache_beam/runners/worker/statecache.py:214 [] - Creating state cache with size 1000
+2025-10-23 07:29:13,288 INFO  /app/.venv/lib/python3.9/site-packages/apache_beam/runners/worker/sdk_worker.py:189 [] - Creating insecure control channel for localhost:43605.
+2025-10-23 07:29:13,290 INFO  /app/.venv/lib/python3.9/site-packages/apache_beam/runners/worker/sdk_worker.py:197 [] - Control channel established.
+2025-10-23 07:29:13,294 INFO  /app/.venv/lib/python3.9/site-packages/apache_beam/runners/worker/sdk_worker.py:247 [] - Initializing SDKHarness with unbounded number of workers.
+2025-10-23 07:29:13,295 INFO  /app/.venv/lib/python3.9/site-packages/apache_beam/runners/worker/sdk_worker_main.py:211 [] - Python sdk harness starting.
+2025-10-23 07:29:13,296 INFO  org.apache.beam.runners.fnexecution.control.FnApiControlClientPoolService [] - Beam Fn Control client connected with id 1-1
+2025-10-23 07:29:13,358 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - Loading state backend via factory org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackendFactory
+2025-10-23 07:29:13,359 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Using predefined options: DEFAULT.
+2025-10-23 07:29:13,374 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 (3bef0a915c9efb21b7bcc27492d6c334_90bea66de1c231edf33913ecd54406c1_0_0) switched from INITIALIZING to RUNNING.
+2025-10-23 07:29:13,381 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Collection Source -> _stream_key_by_map_operator (1/1)#0 (3bef0a915c9efb21b7bcc27492d6c334_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from INITIALIZING to RUNNING.
+2025-10-23 07:29:13,428 INFO  org.apache.beam.runners.fnexecution.control.FnApiControlClientPoolService [] - getProcessBundleDescriptor request with id 1-2
+2025-10-23 07:29:13,434 INFO  /app/.venv/lib/python3.9/site-packages/apache_beam/runners/worker/sdk_worker.py:919 [] - Creating insecure state channel for localhost:41181.
+2025-10-23 07:29:13,435 INFO  /app/.venv/lib/python3.9/site-packages/apache_beam/runners/worker/sdk_worker.py:926 [] - State channel established.
+2025-10-23 07:29:13,439 INFO  /app/.venv/lib/python3.9/site-packages/apache_beam/runners/worker/data_plane.py:822 [] - Creating client data channel for localhost:34985
+2025-10-23 07:29:13,442 INFO  org.apache.beam.runners.fnexecution.data.GrpcDataService     [] - Beam Fn Data client connected.
+2025-10-23 07:29:13,555 INFO  org.apache.beam.runners.fnexecution.control.FnApiControlClientPoolService [] - getProcessBundleDescriptor request with id 1-3

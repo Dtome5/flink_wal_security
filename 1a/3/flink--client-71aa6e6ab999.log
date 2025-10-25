@@ -1,0 +1,91 @@
+2025-10-22 10:54:40,426 INFO  org.apache.flink.client.cli.CliFrontend                      [] - --------------------------------------------------------------------------------
+2025-10-22 10:54:40,444 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  Starting Command Line Client (Version: 2.1.0, Scala: 2.12, Rev:4cb6bd3, Date:2025-07-21T13:23:51+02:00)
+2025-10-22 10:54:40,448 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  OS current user: flink
+2025-10-22 10:54:40,449 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+2025-10-22 10:54:40,449 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  JVM: OpenJDK 64-Bit Server VM - Eclipse Adoptium - 17/17.0.16+8
+2025-10-22 10:54:40,451 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  Arch: amd64
+2025-10-22 10:54:40,455 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  Maximum heap size: 1986 MiBytes
+2025-10-22 10:54:40,457 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  JAVA_HOME: /opt/java/openjdk
+2025-10-22 10:54:40,457 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  No Hadoop Dependency available
+2025-10-22 10:54:40,457 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  JVM Options:
+2025-10-22 10:54:40,458 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     -XX:+IgnoreUnrecognizedVMOptions
+2025-10-22 10:54:40,458 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED
+2025-10-22 10:54:40,458 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+2025-10-22 10:54:40,458 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-opens=java.base/java.lang=ALL-UNNAMED
+2025-10-22 10:54:40,458 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-opens=java.base/java.net=ALL-UNNAMED
+2025-10-22 10:54:40,459 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-opens=java.base/java.io=ALL-UNNAMED
+2025-10-22 10:54:40,459 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-opens=java.base/java.nio=ALL-UNNAMED
+2025-10-22 10:54:40,459 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+2025-10-22 10:54:40,459 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+2025-10-22 10:54:40,459 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-opens=java.base/java.text=ALL-UNNAMED
+2025-10-22 10:54:40,459 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-opens=java.base/java.time=ALL-UNNAMED
+2025-10-22 10:54:40,459 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-opens=java.base/java.util=ALL-UNNAMED
+2025-10-22 10:54:40,459 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+2025-10-22 10:54:40,459 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+2025-10-22 10:54:40,459 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+2025-10-22 10:54:40,459 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     -Dlog.file=/opt/flink/log/flink--client-71aa6e6ab999.log
+2025-10-22 10:54:40,459 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     -Dlog4j.configuration=file:/opt/flink/conf/log4j-cli.properties
+2025-10-22 10:54:40,460 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     -Dlog4j.configurationFile=file:/opt/flink/conf/log4j-cli.properties
+2025-10-22 10:54:40,460 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     -Dlogback.configurationFile=file:/opt/flink/conf/logback.xml
+2025-10-22 10:54:40,460 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  Program Arguments:
+2025-10-22 10:54:40,463 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     run
+2025-10-22 10:54:40,463 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     -s
+2025-10-22 10:54:40,463 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     /tmp/flink-checkpoints/savepoint-0d7363-8a0636428fc4
+2025-10-22 10:54:40,463 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     -py
+2025-10-22 10:54:40,463 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     job.py
+2025-10-22 10:54:40,464 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     -pyexec
+2025-10-22 10:54:40,464 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     /app/.venv/bin/python
+2025-10-22 10:54:40,464 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     /app/.venv/bin/python
+2025-10-22 10:54:40,465 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  Classpath: /opt/flink/lib/flink-cep-2.1.0.jar:/opt/flink/lib/flink-connector-files-2.1.0.jar:/opt/flink/lib/flink-csv-2.1.0.jar:/opt/flink/lib/flink-json-2.1.0.jar:/opt/flink/lib/flink-scala_2.12-2.1.0.jar:/opt/flink/lib/flink-table-api-java-uber-2.1.0.jar:/opt/flink/lib/flink-table-planner-loader-2.1.0.jar:/opt/flink/lib/flink-table-runtime-2.1.0.jar:/opt/flink/lib/log4j-1.2-api-2.24.3.jar:/opt/flink/lib/log4j-api-2.24.3.jar:/opt/flink/lib/log4j-core-2.24.3.jar:/opt/flink/lib/log4j-layout-template-json-2.24.3.jar:/opt/flink/lib/log4j-slf4j-impl-2.24.3.jar:/opt/flink/lib/flink-dist-2.1.0.jar:::
+2025-10-22 10:54:40,465 INFO  org.apache.flink.client.cli.CliFrontend                      [] - --------------------------------------------------------------------------------
+2025-10-22 10:54:40,467 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Using standard YAML parser to load flink configuration file from /opt/flink/conf/config.yaml.
+2025-10-22 10:54:40,536 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: blob.server.port, 6124
+2025-10-22 10:54:40,536 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+2025-10-22 10:54:40,536 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+2025-10-22 10:54:40,537 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+2025-10-22 10:54:40,537 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, 71aa6e6ab999
+2025-10-22 10:54:40,537 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.incremental, false
+2025-10-22 10:54:40,537 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: state.backend.rocksdb.localdir, /tmp/rocksdb
+2025-10-22 10:54:40,537 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.target, remote
+2025-10-22 10:54:40,538 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+2025-10-22 10:54:40,538 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+2025-10-22 10:54:40,538 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: query.server.port, 6125
+2025-10-22 10:54:40,538 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, 0.0.0.0
+2025-10-22 10:54:40,538 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+2025-10-22 10:54:40,539 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.savepoint-dir, file:///tmp/flink-checkpoints
+2025-10-22 10:54:40,539 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.host, 127.0.0.1
+2025-10-22 10:54:40,539 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.externalized-checkpoint-retention, RETAIN_ON_CANCELLATION
+2025-10-22 10:54:40,539 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+2025-10-22 10:54:40,539 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+2025-10-22 10:54:40,540 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.local-backup.enabled, true
+2025-10-22 10:54:40,540 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, 127.0.0.1
+2025-10-22 10:54:40,540 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.state-recovery.ignore-unclaimed-state, true
+2025-10-22 10:54:40,540 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.dir, file:///tmp/flink-checkpoints
+2025-10-22 10:54:40,540 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.all, --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+2025-10-22 10:54:40,541 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: state.backend.type, rocksdb
+2025-10-22 10:54:40,625 INFO  org.apache.flink.client.cli.CliFrontend                      [] - Loading FallbackYarnSessionCli
+2025-10-22 10:54:40,669 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+2025-10-22 10:54:40,688 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+2025-10-22 10:54:40,695 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+2025-10-22 10:54:40,696 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+2025-10-22 10:54:40,697 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+2025-10-22 10:54:40,697 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+2025-10-22 10:54:40,697 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-otel
+2025-10-22 10:54:40,698 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+2025-10-22 10:54:40,698 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+2025-10-22 10:54:40,699 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+2025-10-22 10:54:40,766 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+2025-10-22 10:54:40,809 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /tmp/jaas-3249826140539535969.conf.
+2025-10-22 10:54:40,821 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+2025-10-22 10:54:40,824 INFO  org.apache.flink.client.cli.CliFrontend                      [] - Running 'run' command.
+2025-10-22 10:54:40,890 INFO  org.apache.flink.client.cli.CliFrontend                      [] - Building program from JAR file
+2025-10-22 10:54:40,897 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: false)
+2025-10-22 10:54:41,088 INFO  org.apache.flink.client.python.PythonEnvUtils                [] - Starting Python process with environment variables: {FLINK_TGZ_URL=https://dlcdn.apache.org/flink/flink-2.1.0/flink-2.1.0-bin-scala_2.12.tgz, PATH=/app/.venv/bin:/opt/flink/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin, JAVA_RUN=/opt/java/openjdk/bin/java, ROOT_LOG_LEVEL=INFO, JAVA_HOME=/opt/java/openjdk, PYFLINK_CLIENT_EXECUTABLE=python3, CHECK_GPG=true, FLINK_PLUGINS_DIR=/opt/flink/plugins, GPG_KEY=7A14EF9AD986EF0D56B2E73F6AF817E6C59EC690, LANG=en_US.UTF-8, FLINK_CONF_DIR=/opt/flink/conf, FLINK_ASC_URL=https://downloads.apache.org/flink/flink-2.1.0/flink-2.1.0-bin-scala_2.12.tgz.asc, JAVA_VERSION=jdk-17.0.16+8, PWD=/app, LANGUAGE=en_US:en, UV=/usr/bin/uv, PYTHONPATH=/tmp/pyflink/db9ecd02-626b-42bf-bb61-aeffeff5c016/c764e0af-e9c1-4258-848a-2d8fe83b1582:/opt/flink/opt/python/cloudpickle-2.2.0-src.zip:/opt/flink/opt/python/py4j-0.10.9.7-src.zip:/opt/flink/opt/python/pyflink.zip, FLINK_OPT_DIR=/opt/flink/opt, XDG_DATA_HOME=/opt/uv/data, FLINK_HOME=/opt/flink, MAX_LOG_FILE_NUMBER=10, FLINK_LIB_DIR=/opt/flink/lib, PIP_NO_CACHE_DIR=1, PYFLINK_GATEWAY_PORT=44723, PYTHONDONTWRITEBYTECODE=1, VIRTUAL_ENV=/app/.venv, UV_RUN_RECURSION_DEPTH=1, GOSU_VERSION=1.11, PYTHONUNBUFFERED=1, HOSTNAME=71aa6e6ab999, LC_ALL=en_US.UTF-8, LD_PRELOAD=:/usr/lib/x86_64-linux-gnu/libjemalloc.so, SHLVL=1, HOME=/opt/flink, FLINK_BIN_DIR=/opt/flink/bin}, command: python3 -u job.py /app/.venv/bin/python
+2025-10-22 10:54:41,107 INFO  org.apache.flink.client.python.PythonDriver                  [] - --------------------------- Python Process Started --------------------------
+2025-10-22 10:54:42,027 INFO  org.apache.flink.client.python.PythonDriver                  [] - Using 17576 ordered 3-letter combinations
+2025-10-22 10:54:42,032 INFO  org.apache.flink.client.python.PythonDriver                  [] - Expected ~1.1 occurrences per combination
+2025-10-22 10:54:42,033 INFO  org.apache.flink.client.python.PythonDriver                  [] - First 10: ['aaa', 'aab', 'aac', 'aad', 'aae', 'aaf', 'aag', 'aah', 'aai', 'aaj']
+2025-10-22 10:54:42,034 INFO  org.apache.flink.client.python.PythonDriver                  [] - Last 10: ['zzq', 'zzr', 'zzs', 'zzt', 'zzu', 'zzv', 'zzw', 'zzx', 'zzy', 'zzz']
+2025-10-22 10:54:46,189 INFO  org.apache.flink.client.program.rest.RestClusterClient       [] - Submitting job 'Word Counter' (30e95cf16b7703cb57045e14de5d6a72).
+2025-10-22 10:54:47,641 INFO  org.apache.flink.client.program.rest.RestClusterClient       [] - Successfully submitted job 'Word Counter' (30e95cf16b7703cb57045e14de5d6a72) to 'http://127.0.0.1:8081'.
+2025-10-22 10:55:18,753 INFO  org.apache.flink.client.python.PythonDriver                  [] - --------------------------- Python Process Exited ---------------------------

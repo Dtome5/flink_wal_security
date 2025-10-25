@@ -1,0 +1,1182 @@
+2025-10-22 10:50:40,304 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2025-10-22 10:50:40,312 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Preconfiguration: 
+2025-10-22 10:50:40,313 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - 
+
+
+RESOURCE_PARAMS extraction logs:
+jvm_params: -Xmx1073741824 -Xms1073741824 -XX:MaxMetaspaceSize=268435456
+dynamic_configs: -D jobmanager.memory.off-heap.size=134217728b -D jobmanager.memory.jvm-overhead.min=201326592b -D jobmanager.memory.jvm-metaspace.size=268435456b -D jobmanager.memory.heap.size=1073741824b -D jobmanager.memory.jvm-overhead.max=201326592b
+logs: INFO  [] - Using standard YAML parser to load flink configuration file from /opt/flink/conf/config.yaml.
+INFO  [] - Loading configuration property: blob.server.port, 6124
+INFO  [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+INFO  [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+INFO  [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+INFO  [] - Loading configuration property: jobmanager.rpc.address, c1a8c011d20c
+INFO  [] - Loading configuration property: execution.checkpointing.incremental, false
+INFO  [] - Loading configuration property: state.backend.rocksdb.localdir, /tmp/rocksdb
+INFO  [] - Loading configuration property: execution.target, remote
+INFO  [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+INFO  [] - Loading configuration property: jobmanager.rpc.port, 6123
+INFO  [] - Loading configuration property: query.server.port, 6125
+INFO  [] - Loading configuration property: rest.bind-address, 0.0.0.0
+INFO  [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+INFO  [] - Loading configuration property: execution.checkpointing.savepoint-dir, file:///tmp/flink-checkpoints
+INFO  [] - Loading configuration property: taskmanager.host, 127.0.0.1
+INFO  [] - Loading configuration property: execution.checkpointing.externalized-checkpoint-retention, RETAIN_ON_CANCELLATION
+INFO  [] - Loading configuration property: parallelism.default, 1
+INFO  [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+INFO  [] - Loading configuration property: execution.checkpointing.local-backup.enabled, true
+INFO  [] - Loading configuration property: rest.address, 127.0.0.1
+INFO  [] - Loading configuration property: execution.state-recovery.ignore-unclaimed-state, true
+INFO  [] - Loading configuration property: execution.checkpointing.dir, file:///tmp/flink-checkpoints
+INFO  [] - Loading configuration property: env.java.opts.all, --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+INFO  [] - Loading configuration property: state.backend.type, rocksdb
+INFO  [] - The derived from fraction jvm overhead memory (160.000mb (167772162 bytes)) is less than its min value 192.000mb (201326592 bytes), min value will be used instead
+INFO  [] - Final Master Memory configuration:
+INFO  [] -   Total Process Memory: 1.563gb (1677721600 bytes)
+INFO  [] -     Total Flink Memory: 1.125gb (1207959552 bytes)
+INFO  [] -       JVM Heap:         1024.000mb (1073741824 bytes)
+INFO  [] -       Off-heap:         128.000mb (134217728 bytes)
+INFO  [] -     JVM Metaspace:      256.000mb (268435456 bytes)
+INFO  [] -     JVM Overhead:       192.000mb (201326592 bytes)
+
+2025-10-22 10:50:40,315 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2025-10-22 10:50:40,336 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Starting StandaloneSessionClusterEntrypoint (Version: 2.1.0, Scala: 2.12, Rev:4cb6bd3, Date:2025-07-21T13:23:51+02:00)
+2025-10-22 10:50:40,339 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  OS current user: flink
+2025-10-22 10:50:40,340 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+2025-10-22 10:50:40,340 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM: OpenJDK 64-Bit Server VM - Eclipse Adoptium - 17/17.0.16+8
+2025-10-22 10:50:40,341 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Arch: amd64
+2025-10-22 10:50:40,346 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Maximum heap size: 1024 MiBytes
+2025-10-22 10:50:40,347 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JAVA_HOME: /opt/java/openjdk
+2025-10-22 10:50:40,347 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  No Hadoop Dependency available
+2025-10-22 10:50:40,347 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM Options:
+2025-10-22 10:50:40,347 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xmx1073741824
+2025-10-22 10:50:40,347 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xms1073741824
+2025-10-22 10:50:40,348 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -XX:MaxMetaspaceSize=268435456
+2025-10-22 10:50:40,348 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -XX:+IgnoreUnrecognizedVMOptions
+2025-10-22 10:50:40,348 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED
+2025-10-22 10:50:40,349 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+2025-10-22 10:50:40,349 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.lang=ALL-UNNAMED
+2025-10-22 10:50:40,349 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.net=ALL-UNNAMED
+2025-10-22 10:50:40,350 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.io=ALL-UNNAMED
+2025-10-22 10:50:40,350 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.nio=ALL-UNNAMED
+2025-10-22 10:50:40,350 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+2025-10-22 10:50:40,351 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+2025-10-22 10:50:40,351 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.text=ALL-UNNAMED
+2025-10-22 10:50:40,351 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.time=ALL-UNNAMED
+2025-10-22 10:50:40,352 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util=ALL-UNNAMED
+2025-10-22 10:50:40,352 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+2025-10-22 10:50:40,352 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+2025-10-22 10:50:40,352 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+2025-10-22 10:50:40,352 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog.file=/opt/flink/log/flink--standalonesession-0-c1a8c011d20c.log
+2025-10-22 10:50:40,353 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configuration=file:/opt/flink/conf/log4j.properties
+2025-10-22 10:50:40,354 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configurationFile=file:/opt/flink/conf/log4j.properties
+2025-10-22 10:50:40,354 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlogback.configurationFile=file:/opt/flink/conf/logback.xml
+2025-10-22 10:50:40,356 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Program Arguments:
+2025-10-22 10:50:40,358 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2025-10-22 10:50:40,358 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.off-heap.size=134217728b
+2025-10-22 10:50:40,358 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2025-10-22 10:50:40,358 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.min=201326592b
+2025-10-22 10:50:40,358 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2025-10-22 10:50:40,359 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-metaspace.size=268435456b
+2025-10-22 10:50:40,359 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2025-10-22 10:50:40,359 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.heap.size=1073741824b
+2025-10-22 10:50:40,359 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2025-10-22 10:50:40,359 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.max=201326592b
+2025-10-22 10:50:40,359 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --configDir
+2025-10-22 10:50:40,360 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     /opt/flink/conf
+2025-10-22 10:50:40,360 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Classpath: /opt/flink/lib/flink-cep-2.1.0.jar:/opt/flink/lib/flink-connector-files-2.1.0.jar:/opt/flink/lib/flink-csv-2.1.0.jar:/opt/flink/lib/flink-json-2.1.0.jar:/opt/flink/lib/flink-scala_2.12-2.1.0.jar:/opt/flink/lib/flink-table-api-java-uber-2.1.0.jar:/opt/flink/lib/flink-table-planner-loader-2.1.0.jar:/opt/flink/lib/flink-table-runtime-2.1.0.jar:/opt/flink/lib/log4j-1.2-api-2.24.3.jar:/opt/flink/lib/log4j-api-2.24.3.jar:/opt/flink/lib/log4j-core-2.24.3.jar:/opt/flink/lib/log4j-layout-template-json-2.24.3.jar:/opt/flink/lib/log4j-slf4j-impl-2.24.3.jar:/opt/flink/lib/flink-dist-2.1.0.jar::::
+2025-10-22 10:50:40,360 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2025-10-22 10:50:40,370 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Registered UNIX signal handlers for [TERM, HUP, INT]
+2025-10-22 10:50:40,394 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Using standard YAML parser to load flink configuration file from /opt/flink/conf/config.yaml.
+2025-10-22 10:50:40,476 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: blob.server.port, 6124
+2025-10-22 10:50:40,476 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+2025-10-22 10:50:40,477 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+2025-10-22 10:50:40,477 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+2025-10-22 10:50:40,478 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, c1a8c011d20c
+2025-10-22 10:50:40,479 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.incremental, false
+2025-10-22 10:50:40,481 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: state.backend.rocksdb.localdir, /tmp/rocksdb
+2025-10-22 10:50:40,481 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.target, remote
+2025-10-22 10:50:40,482 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+2025-10-22 10:50:40,482 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+2025-10-22 10:50:40,483 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: query.server.port, 6125
+2025-10-22 10:50:40,483 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, 0.0.0.0
+2025-10-22 10:50:40,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+2025-10-22 10:50:40,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.savepoint-dir, file:///tmp/flink-checkpoints
+2025-10-22 10:50:40,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.host, 127.0.0.1
+2025-10-22 10:50:40,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.externalized-checkpoint-retention, RETAIN_ON_CANCELLATION
+2025-10-22 10:50:40,485 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+2025-10-22 10:50:40,485 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+2025-10-22 10:50:40,485 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.local-backup.enabled, true
+2025-10-22 10:50:40,488 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, 127.0.0.1
+2025-10-22 10:50:40,488 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.state-recovery.ignore-unclaimed-state, true
+2025-10-22 10:50:40,489 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.checkpointing.dir, file:///tmp/flink-checkpoints
+2025-10-22 10:50:40,489 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.all, --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+2025-10-22 10:50:40,490 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: state.backend.type, rocksdb
+2025-10-22 10:50:40,490 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.off-heap.size, 134217728b
+2025-10-22 10:50:40,491 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.min, 201326592b
+2025-10-22 10:50:40,491 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-metaspace.size, 268435456b
+2025-10-22 10:50:40,491 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.heap.size, 1073741824b
+2025-10-22 10:50:40,491 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.max, 201326592b
+2025-10-22 10:50:40,564 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Starting StandaloneSessionClusterEntrypoint.
+2025-10-22 10:50:40,647 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install default filesystem.
+2025-10-22 10:50:40,654 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+2025-10-22 10:50:40,673 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+2025-10-22 10:50:40,681 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+2025-10-22 10:50:40,682 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+2025-10-22 10:50:40,682 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+2025-10-22 10:50:40,683 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+2025-10-22 10:50:40,683 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-otel
+2025-10-22 10:50:40,683 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+2025-10-22 10:50:40,683 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+2025-10-22 10:50:40,683 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+2025-10-22 10:50:40,710 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install security context.
+2025-10-22 10:50:40,742 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+2025-10-22 10:50:40,753 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /tmp/jaas-6433327387524130376.conf.
+2025-10-22 10:50:40,760 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+2025-10-22 10:50:40,763 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Initializing cluster services.
+2025-10-22 10:50:40,779 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Using working directory: WorkingDirectory(/tmp/jm_a97097a1237c1073df659fe18fd5c7b5).
+2025-10-22 10:50:41,210 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address c1a8c011d20c:6123, bind address 0.0.0.0:6123.
+2025-10-22 10:50:42,254 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+2025-10-22 10:50:42,341 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2025-10-22 10:50:42,345 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+2025-10-22 10:50:42,732 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink@c1a8c011d20c:6123]
+2025-10-22 10:50:42,951 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink@c1a8c011d20c:6123
+2025-10-22 10:50:42,984 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Loading delegation token providers
+2025-10-22 10:50:42,992 INFO  org.apache.flink.runtime.security.token.hadoop.HadoopFSDelegationTokenProvider [] - Hadoop FS is not available (not packaged with this application): NoClassDefFoundError : "org/apache/hadoop/conf/Configuration".
+2025-10-22 10:50:42,993 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hadoopfs loaded and initialized
+2025-10-22 10:50:42,997 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hbase loaded and initialized
+2025-10-22 10:50:42,997 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2025-10-22 10:50:42,997 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2025-10-22 10:50:42,997 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2025-10-22 10:50:42,998 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2025-10-22 10:50:42,998 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2025-10-22 10:50:42,998 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-otel
+2025-10-22 10:50:42,999 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2025-10-22 10:50:42,999 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2025-10-22 10:50:42,999 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2025-10-22 10:50:42,999 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token providers loaded successfully
+2025-10-22 10:50:43,002 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+2025-10-22 10:50:43,005 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+2025-10-22 10:50:43,008 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+2025-10-22 10:50:43,009 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2025-10-22 10:50:43,009 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2025-10-22 10:50:43,009 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2025-10-22 10:50:43,010 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2025-10-22 10:50:43,010 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2025-10-22 10:50:43,010 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-otel
+2025-10-22 10:50:43,011 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2025-10-22 10:50:43,011 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2025-10-22 10:50:43,012 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2025-10-22 10:50:43,014 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+2025-10-22 10:50:43,015 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Checking provider and receiver instances consistency
+2025-10-22 10:50:43,015 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Provider and receiver instances are consistent
+2025-10-22 10:50:43,016 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Obtaining delegation tokens
+2025-10-22 10:50:43,020 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation tokens obtained successfully
+2025-10-22 10:50:43,020 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping notifications
+2025-10-22 10:50:43,055 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Created BLOB server storage directory /tmp/jm_a97097a1237c1073df659fe18fd5c7b5/blobStorage
+2025-10-22 10:50:43,067 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Started BLOB server at 0.0.0.0:6124 - max concurrent requests: 50 - max backlog: 1000
+2025-10-22 10:50:43,115 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No metrics reporter configured, no metrics will be exposed/reported.
+2025-10-22 10:50:43,115 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No trace reporter configured, no traces will be exposed/reported.
+2025-10-22 10:50:43,116 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No event reporter configured, no events will be exposed/reported.
+2025-10-22 10:50:43,125 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address c1a8c011d20c:0, bind address 0.0.0.0:0.
+2025-10-22 10:50:43,185 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+2025-10-22 10:50:43,192 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2025-10-22 10:50:43,193 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+2025-10-22 10:50:43,242 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink-metrics@c1a8c011d20c:42207]
+2025-10-22 10:50:43,300 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink-metrics@c1a8c011d20c:42207
+2025-10-22 10:50:43,350 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at pekko://flink-metrics/user/rpc/MetricQueryService .
+2025-10-22 10:50:43,551 INFO  org.apache.flink.runtime.dispatcher.FileExecutionGraphInfoStore [] - Initializing FileExecutionGraphInfoStore: Storage directory /tmp/executionGraphStore-69d40280-a72c-4768-80c7-a046c70e7901, expiration time 3600000, maximum cache size 52428800 bytes.
+2025-10-22 10:50:43,637 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Upload directory /tmp/flink-web-5fde89d6-7ce7-41b3-8397-71fca91b01cb/flink-web-upload does not exist. 
+2025-10-22 10:50:43,638 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Created directory /tmp/flink-web-5fde89d6-7ce7-41b3-8397-71fca91b01cb/flink-web-upload for file uploads.
+2025-10-22 10:50:43,642 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Starting rest endpoint.
+2025-10-22 10:50:44,095 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component log file: /opt/flink/log/flink--standalonesession-0-c1a8c011d20c.log
+2025-10-22 10:50:44,097 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component stdout file: /opt/flink/log/flink--standalonesession-0-c1a8c011d20c.out
+2025-10-22 10:50:44,149 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Rest endpoint listening at 127.0.0.1:8081
+2025-10-22 10:50:44,151 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - http://127.0.0.1:8081 was granted leadership with leaderSessionID=00000000-0000-0000-0000-000000000000
+2025-10-22 10:50:44,152 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Web frontend listening at http://127.0.0.1:8081.
+2025-10-22 10:50:44,179 INFO  org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherRunner [] - DefaultDispatcherRunner was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new DispatcherLeaderProcess.
+2025-10-22 10:50:44,184 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Start SessionDispatcherLeaderProcess.
+2025-10-22 10:50:44,186 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Starting resource manager service.
+2025-10-22 10:50:44,191 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Recover all persisted job graphs that are not finished, yet.
+2025-10-22 10:50:44,192 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Resource manager service is granted leadership with session id 00000000-0000-0000-0000-000000000000.
+2025-10-22 10:50:44,195 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Successfully recovered 0 persisted job graphs.
+2025-10-22 10:50:44,239 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at pekko://flink/user/rpc/dispatcher_0 .
+2025-10-22 10:50:44,267 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at pekko://flink/user/rpc/resourcemanager_1 .
+2025-10-22 10:50:44,290 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Starting the resource manager.
+2025-10-22 10:50:44,298 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Starting the slot manager.
+2025-10-22 10:50:44,301 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Starting tokens update task
+2025-10-22 10:50:44,301 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping notifications
+2025-10-22 10:50:44,301 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Tokens update task not started because either no tokens obtained or none of the tokens specified its renewal date
+2025-10-22 10:50:47,377 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering TaskManager with ResourceID 127.0.0.1:39421-3f0676 (pekko.tcp://flink@127.0.0.1:39421/user/rpc/taskmanager_0) at ResourceManager
+2025-10-22 10:50:47,434 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Unregistering task executor 324b9174aa9f2885477a96774b5be87b from the slot manager.
+2025-10-22 10:50:47,435 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering TaskManager with ResourceID 127.0.0.1:39421-3f0676 (pekko.tcp://flink@127.0.0.1:39421/user/rpc/taskmanager_0) at ResourceManager
+2025-10-22 10:50:47,475 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Registering task executor 127.0.0.1:39421-3f0676 under 2dd0782e81930939814cf203157f8603 at the slot manager.
+2025-10-22 10:50:57,235 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received job submission 'Word Counter' (c86aba7a2c29361426b1e04c1d7c17f4).
+2025-10-22 10:50:57,238 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'Word Counter' (c86aba7a2c29361426b1e04c1d7c17f4).
+2025-10-22 10:50:57,391 INFO  org.apache.flink.runtime.jobmaster.JobMasterServiceLeadershipRunner [] - JobMasterServiceLeadershipRunner for job c86aba7a2c29361426b1e04c1d7c17f4 was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new JobMasterServiceProcess.
+2025-10-22 10:50:57,406 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at pekko://flink/user/rpc/jobmanager_2 .
+2025-10-22 10:50:57,418 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'Word Counter' (c86aba7a2c29361426b1e04c1d7c17f4).
+2025-10-22 10:50:57,559 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy ExponentialDelayRestartBackoffTimeStrategy(initialBackoffMS=1000, maxBackoffMS=60000, backoffMultiplier=1.5, resetBackoffThresholdMS=3600000, jitterFactor=0.1, attemptsBeforeResetBackoff=2147483647, currentRestartAttempt=0, nextRestartTimestamp=-2147483648) for Word Counter (c86aba7a2c29361426b1e04c1d7c17f4).
+2025-10-22 10:50:57,606 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Created execution graph a6d75e5c7eca4e8f9cfc6ecfb14e7154 for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:50:57,617 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job Word Counter (c86aba7a2c29361426b1e04c1d7c17f4).
+2025-10-22 10:50:57,621 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 3 ms.
+2025-10-22 10:50:57,649 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 new pipelined regions in 1 ms, total 1 pipelined regions currently.
+2025-10-22 10:50:57,652 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Loading state backend via factory org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackendFactory
+2025-10-22 10:50:57,673 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Using predefined options: DEFAULT.
+2025-10-22 10:50:57,679 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as EmbeddedRocksDBStateBackend
+2025-10-22 10:50:57,684 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'filesystem': (checkpoints "file:/tmp/flink-checkpoints")
+2025-10-22 10:50:57,712 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+2025-10-22 10:50:57,718 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.RestartPipelinedRegionFailoverStrategy@51286dca for Word Counter (c86aba7a2c29361426b1e04c1d7c17f4).
+2025-10-22 10:50:57,731 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'Word Counter' (c86aba7a2c29361426b1e04c1d7c17f4) under job master id 00000000000000000000000000000000.
+2025-10-22 10:50:57,736 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2025-10-22 10:50:57,736 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Word Counter (c86aba7a2c29361426b1e04c1d7c17f4) switched from state CREATED to RUNNING.
+2025-10-22 10:50:57,742 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (a6d75e5c7eca4e8f9cfc6ecfb14e7154_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CREATED to SCHEDULED.
+2025-10-22 10:50:57,742 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (a6d75e5c7eca4e8f9cfc6ecfb14e7154_90bea66de1c231edf33913ecd54406c1_0_0) switched from CREATED to SCHEDULED.
+2025-10-22 10:50:57,761 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager pekko.tcp://flink@c1a8c011d20c:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000)
+2025-10-22 10:50:57,767 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+2025-10-22 10:50:57,771 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager 00000000000000000000000000000000@pekko.tcp://flink@c1a8c011d20c:6123/user/rpc/jobmanager_2 for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:50:57,786 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager 00000000000000000000000000000000@pekko.tcp://flink@c1a8c011d20c:6123/user/rpc/jobmanager_2 for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:50:57,791 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: 00000000000000000000000000000000.
+2025-10-22 10:50:57,796 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Received resource requirements from job c86aba7a2c29361426b1e04c1d7c17f4: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+2025-10-22 10:50:57,869 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Matching resource requirements against available resources.
+Missing resources:
+	 Job c86aba7a2c29361426b1e04c1d7c17f4
+		ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}
+Current resources:
+	TaskManager 127.0.0.1:39421-3f0676
+		Available: ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}
+		Total:     ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}
+2025-10-22 10:50:57,881 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DefaultSlotStatusSyncer [] - Starting allocation of slot a949d5beb1d5fd6ccadd256882217e38 from 127.0.0.1:39421-3f0676 for job c86aba7a2c29361426b1e04c1d7c17f4 with resource profile ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}.
+2025-10-22 10:50:57,916 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job c86aba7a2c29361426b1e04c1d7c17f4 since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job c86aba7a2c29361426b1e04c1d7c17f4 is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 10:50:58,057 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (a6d75e5c7eca4e8f9cfc6ecfb14e7154_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from SCHEDULED to DEPLOYING.
+2025-10-22 10:50:58,058 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Source: Collection Source -> _stream_key_by_map_operator (1/1) (attempt #0) with attempt id a6d75e5c7eca4e8f9cfc6ecfb14e7154_cbc357ccb763df2852fee8c4fc7d55f2_0_0 and vertex id cbc357ccb763df2852fee8c4fc7d55f2_0 to 127.0.0.1:39421-3f0676 @ localhost (dataPort=35911) with allocation id a949d5beb1d5fd6ccadd256882217e38
+2025-10-22 10:50:58,062 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (a6d75e5c7eca4e8f9cfc6ecfb14e7154_90bea66de1c231edf33913ecd54406c1_0_0) switched from SCHEDULED to DEPLOYING.
+2025-10-22 10:50:58,063 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying KEYED PROCESS -> Sink: Print to Std. Out (1/1) (attempt #0) with attempt id a6d75e5c7eca4e8f9cfc6ecfb14e7154_90bea66de1c231edf33913ecd54406c1_0_0 and vertex id 90bea66de1c231edf33913ecd54406c1_0 to 127.0.0.1:39421-3f0676 @ localhost (dataPort=35911) with allocation id a949d5beb1d5fd6ccadd256882217e38
+2025-10-22 10:50:58,546 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (a6d75e5c7eca4e8f9cfc6ecfb14e7154_90bea66de1c231edf33913ecd54406c1_0_0) switched from DEPLOYING to INITIALIZING.
+2025-10-22 10:50:58,550 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (a6d75e5c7eca4e8f9cfc6ecfb14e7154_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from DEPLOYING to INITIALIZING.
+2025-10-22 10:50:58,902 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job c86aba7a2c29361426b1e04c1d7c17f4 since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job c86aba7a2c29361426b1e04c1d7c17f4 is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 10:50:59,899 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job c86aba7a2c29361426b1e04c1d7c17f4 since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job c86aba7a2c29361426b1e04c1d7c17f4 is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 10:51:00,899 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job c86aba7a2c29361426b1e04c1d7c17f4 since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job c86aba7a2c29361426b1e04c1d7c17f4 is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 10:51:01,898 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job c86aba7a2c29361426b1e04c1d7c17f4 since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job c86aba7a2c29361426b1e04c1d7c17f4 is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 10:51:02,899 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job c86aba7a2c29361426b1e04c1d7c17f4 since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job c86aba7a2c29361426b1e04c1d7c17f4 is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 10:51:03,902 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job c86aba7a2c29361426b1e04c1d7c17f4 since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job c86aba7a2c29361426b1e04c1d7c17f4 is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 10:51:04,039 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (a6d75e5c7eca4e8f9cfc6ecfb14e7154_90bea66de1c231edf33913ecd54406c1_0_0) switched from INITIALIZING to RUNNING.
+2025-10-22 10:51:04,050 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (a6d75e5c7eca4e8f9cfc6ecfb14e7154_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from INITIALIZING to RUNNING.
+2025-10-22 10:51:04,909 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 1 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130264898 for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:51:16,326 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Triggering savepoint for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:51:16,333 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 2 (type=SavepointType{name='Savepoint', postCheckpointAction=NONE, formatType=NATIVE}) @ 1761130276329 for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:51:23,266 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Completed checkpoint 1 for job c86aba7a2c29361426b1e04c1d7c17f4 (145633 bytes, checkpointDuration=18364 ms, finalizationTime=4 ms).
+2025-10-22 10:51:27,345 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Completed checkpoint 2 for job c86aba7a2c29361426b1e04c1d7c17f4 (194897 bytes, checkpointDuration=11016 ms, finalizationTime=0 ms).
+2025-10-22 10:51:27,346 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 21447
+2025-10-22 10:51:27,347 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 3 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130287346 for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:51:33,984 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Triggering a manual checkpoint for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:51:34,043 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Completed checkpoint 3 for job c86aba7a2c29361426b1e04c1d7c17f4 (244913 bytes, checkpointDuration=6681 ms, finalizationTime=16 ms).
+2025-10-22 10:51:34,051 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 4 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130294046 for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:51:34,229 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (a6d75e5c7eca4e8f9cfc6ecfb14e7154_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from RUNNING to FINISHED.
+2025-10-22 10:51:34,212 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Decline checkpoint 4 by task a6d75e5c7eca4e8f9cfc6ecfb14e7154_cbc357ccb763df2852fee8c4fc7d55f2_0_0 of job c86aba7a2c29361426b1e04c1d7c17f4 at 127.0.0.1:39421-3f0676 @ localhost (dataPort=35911).
+org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : Source: Collection Source -> _stream_key_by_map_operator (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:51:34,262 WARN  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger or complete checkpoint 4 for job c86aba7a2c29361426b1e04c1d7c17f4. (0 consecutive failed attempts so far)
+org.apache.flink.runtime.checkpoint.CheckpointException: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.messages.checkpoint.SerializedCheckpointException.unwrap(SerializedCheckpointException.java:51) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.checkpoint.CheckpointCoordinator.receiveDeclineMessage(CheckpointCoordinator.java:1146) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$declineCheckpoint$3(ExecutionGraphHandler.java:123) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$processCheckpointCoordinatorMessage$4(ExecutionGraphHandler.java:139) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.util.MdcUtils.lambda$wrapRunnable$1(MdcUtils.java:70) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:?]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : Source: Collection Source -> _stream_key_by_map_operator (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:51:34,274 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 27375
+2025-10-22 10:51:34,280 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 5 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130294274 for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:51:34,312 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Decline checkpoint 5 by task a6d75e5c7eca4e8f9cfc6ecfb14e7154_90bea66de1c231edf33913ecd54406c1_0_0 of job c86aba7a2c29361426b1e04c1d7c17f4 at 127.0.0.1:39421-3f0676 @ localhost (dataPort=35911).
+org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:51:34,316 WARN  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger or complete checkpoint 5 for job c86aba7a2c29361426b1e04c1d7c17f4. (0 consecutive failed attempts so far)
+org.apache.flink.runtime.checkpoint.CheckpointException: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.messages.checkpoint.SerializedCheckpointException.unwrap(SerializedCheckpointException.java:51) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.checkpoint.CheckpointCoordinator.receiveDeclineMessage(CheckpointCoordinator.java:1146) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$declineCheckpoint$3(ExecutionGraphHandler.java:123) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$processCheckpointCoordinatorMessage$4(ExecutionGraphHandler.java:139) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.util.MdcUtils.lambda$wrapRunnable$1(MdcUtils.java:70) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:?]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:51:34,325 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 26428
+2025-10-22 10:51:34,329 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 6 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130294326 for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:51:34,348 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Decline checkpoint 6 by task a6d75e5c7eca4e8f9cfc6ecfb14e7154_90bea66de1c231edf33913ecd54406c1_0_0 of job c86aba7a2c29361426b1e04c1d7c17f4 at 127.0.0.1:39421-3f0676 @ localhost (dataPort=35911).
+org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:51:34,351 WARN  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger or complete checkpoint 6 for job c86aba7a2c29361426b1e04c1d7c17f4. (0 consecutive failed attempts so far)
+org.apache.flink.runtime.checkpoint.CheckpointException: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.messages.checkpoint.SerializedCheckpointException.unwrap(SerializedCheckpointException.java:51) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.checkpoint.CheckpointCoordinator.receiveDeclineMessage(CheckpointCoordinator.java:1146) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$declineCheckpoint$3(ExecutionGraphHandler.java:123) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$processCheckpointCoordinatorMessage$4(ExecutionGraphHandler.java:139) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.util.MdcUtils.lambda$wrapRunnable$1(MdcUtils.java:70) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:?]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:51:34,359 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 25461
+2025-10-22 10:51:34,360 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 7 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130294359 for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:51:34,375 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Decline checkpoint 7 by task a6d75e5c7eca4e8f9cfc6ecfb14e7154_90bea66de1c231edf33913ecd54406c1_0_0 of job c86aba7a2c29361426b1e04c1d7c17f4 at 127.0.0.1:39421-3f0676 @ localhost (dataPort=35911).
+org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:51:34,380 WARN  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger or complete checkpoint 7 for job c86aba7a2c29361426b1e04c1d7c17f4. (0 consecutive failed attempts so far)
+org.apache.flink.runtime.checkpoint.CheckpointException: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.messages.checkpoint.SerializedCheckpointException.unwrap(SerializedCheckpointException.java:51) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.checkpoint.CheckpointCoordinator.receiveDeclineMessage(CheckpointCoordinator.java:1146) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$declineCheckpoint$3(ExecutionGraphHandler.java:123) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$processCheckpointCoordinatorMessage$4(ExecutionGraphHandler.java:139) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.util.MdcUtils.lambda$wrapRunnable$1(MdcUtils.java:70) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:?]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:51:34,391 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 24492
+2025-10-22 10:51:34,400 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 8 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130294391 for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:51:34,424 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (a6d75e5c7eca4e8f9cfc6ecfb14e7154_90bea66de1c231edf33913ecd54406c1_0_0) switched from RUNNING to FINISHED.
+2025-10-22 10:51:34,435 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering Checkpoint 8 for job c86aba7a2c29361426b1e04c1d7c17f4 failed due to org.apache.flink.runtime.checkpoint.CheckpointException: TaskManager received a checkpoint request for unknown task a6d75e5c7eca4e8f9cfc6ecfb14e7154_90bea66de1c231edf33913ecd54406c1_0_0. Failure reason: Task local checkpoint failure.
+2025-10-22 10:51:34,447 WARN  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger or complete checkpoint 8 for job c86aba7a2c29361426b1e04c1d7c17f4. (0 consecutive failed attempts so far)
+org.apache.flink.runtime.checkpoint.CheckpointException: TaskManager received a checkpoint request for unknown task a6d75e5c7eca4e8f9cfc6ecfb14e7154_90bea66de1c231edf33913ecd54406c1_0_0. Failure reason: Task local checkpoint failure.
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1108) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:51:34,453 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 23555
+2025-10-22 10:51:34,480 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Word Counter (c86aba7a2c29361426b1e04c1d7c17f4) switched from state RUNNING to FINISHED.
+2025-10-22 10:51:34,483 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Stopping checkpoint coordinator for job c86aba7a2c29361426b1e04c1d7c17f4.
+2025-10-22 10:51:34,491 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Clearing resource requirements of job c86aba7a2c29361426b1e04c1d7c17f4
+2025-10-22 10:51:34,516 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job c86aba7a2c29361426b1e04c1d7c17f4 reached terminal state FINISHED.
+2025-10-22 10:51:34,624 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Stopping the JobMaster for job 'Word Counter' (c86aba7a2c29361426b1e04c1d7c17f4).
+2025-10-22 10:51:34,635 INFO  org.apache.flink.runtime.checkpoint.StandaloneCompletedCheckpointStore [] - Shutting down
+2025-10-22 10:51:34,641 INFO  org.apache.flink.runtime.jobmaster.slotpool.DefaultDeclarativeSlotPool [] - Releasing slot [a949d5beb1d5fd6ccadd256882217e38].
+2025-10-22 10:51:34,660 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Disconnect TaskExecutor 127.0.0.1:39421-3f0676 because: Stopping JobMaster for job 'Word Counter' (c86aba7a2c29361426b1e04c1d7c17f4).
+2025-10-22 10:51:34,661 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Close ResourceManager connection a97097a1237c1073df659fe18fd5c7b5: Stopping JobMaster for job 'Word Counter' (c86aba7a2c29361426b1e04c1d7c17f4).
+2025-10-22 10:51:34,669 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Disconnect job manager 00000000000000000000000000000000@pekko.tcp://flink@c1a8c011d20c:6123/user/rpc/jobmanager_2 for job c86aba7a2c29361426b1e04c1d7c17f4 from the resource manager.
+2025-10-22 10:51:34,724 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DefaultSlotStatusSyncer [] - Freeing slot a949d5beb1d5fd6ccadd256882217e38.
+2025-10-22 10:51:38,362 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received job submission 'Word Counter' (aeeff31b6aa71a17c89a75b04548ac16).
+2025-10-22 10:51:38,362 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'Word Counter' (aeeff31b6aa71a17c89a75b04548ac16).
+2025-10-22 10:51:38,393 INFO  org.apache.flink.runtime.jobmaster.JobMasterServiceLeadershipRunner [] - JobMasterServiceLeadershipRunner for job aeeff31b6aa71a17c89a75b04548ac16 was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new JobMasterServiceProcess.
+2025-10-22 10:51:38,395 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at pekko://flink/user/rpc/jobmanager_3 .
+2025-10-22 10:51:38,395 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'Word Counter' (aeeff31b6aa71a17c89a75b04548ac16).
+2025-10-22 10:51:38,416 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy ExponentialDelayRestartBackoffTimeStrategy(initialBackoffMS=1000, maxBackoffMS=60000, backoffMultiplier=1.5, resetBackoffThresholdMS=3600000, jitterFactor=0.1, attemptsBeforeResetBackoff=2147483647, currentRestartAttempt=0, nextRestartTimestamp=-2147483648) for Word Counter (aeeff31b6aa71a17c89a75b04548ac16).
+2025-10-22 10:51:38,417 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Created execution graph dd15221aa0fb746ed7200e091416524a for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:51:38,419 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job Word Counter (aeeff31b6aa71a17c89a75b04548ac16).
+2025-10-22 10:51:38,422 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 2 ms.
+2025-10-22 10:51:38,424 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 new pipelined regions in 0 ms, total 1 pipelined regions currently.
+2025-10-22 10:51:38,425 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Loading state backend via factory org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackendFactory
+2025-10-22 10:51:38,425 INFO  org.apache.flink.state.rocksdb.EmbeddedRocksDBStateBackend   [] - Using predefined options: DEFAULT.
+2025-10-22 10:51:38,426 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as EmbeddedRocksDBStateBackend
+2025-10-22 10:51:38,427 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'filesystem': (checkpoints "file:/tmp/flink-checkpoints")
+2025-10-22 10:51:38,430 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+2025-10-22 10:51:38,430 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Starting job aeeff31b6aa71a17c89a75b04548ac16 from savepoint /tmp/flink-checkpoints/savepoint-c86aba-c0f40b7c4077 ()
+2025-10-22 10:51:38,445 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Reset the checkpoint ID of job aeeff31b6aa71a17c89a75b04548ac16 to 3.
+2025-10-22 10:51:38,445 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Restoring job aeeff31b6aa71a17c89a75b04548ac16 from Savepoint 2 @ 0 for aeeff31b6aa71a17c89a75b04548ac16 located at file:/tmp/flink-checkpoints/savepoint-c86aba-c0f40b7c4077.
+2025-10-22 10:51:38,461 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No master state to restore
+2025-10-22 10:51:38,462 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.RestartPipelinedRegionFailoverStrategy@5c834ae9 for Word Counter (aeeff31b6aa71a17c89a75b04548ac16).
+2025-10-22 10:51:38,463 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'Word Counter' (aeeff31b6aa71a17c89a75b04548ac16) under job master id 00000000000000000000000000000000.
+2025-10-22 10:51:38,463 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2025-10-22 10:51:38,464 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Word Counter (aeeff31b6aa71a17c89a75b04548ac16) switched from state CREATED to RUNNING.
+2025-10-22 10:51:38,464 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (dd15221aa0fb746ed7200e091416524a_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CREATED to SCHEDULED.
+2025-10-22 10:51:38,464 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (dd15221aa0fb746ed7200e091416524a_90bea66de1c231edf33913ecd54406c1_0_0) switched from CREATED to SCHEDULED.
+2025-10-22 10:51:38,466 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager pekko.tcp://flink@c1a8c011d20c:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000)
+2025-10-22 10:51:38,467 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+2025-10-22 10:51:38,470 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager 00000000000000000000000000000000@pekko.tcp://flink@c1a8c011d20c:6123/user/rpc/jobmanager_3 for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:51:38,474 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager 00000000000000000000000000000000@pekko.tcp://flink@c1a8c011d20c:6123/user/rpc/jobmanager_3 for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:51:38,474 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: 00000000000000000000000000000000.
+2025-10-22 10:51:38,475 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Received resource requirements from job aeeff31b6aa71a17c89a75b04548ac16: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+2025-10-22 10:51:38,487 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Received resource requirements from job aeeff31b6aa71a17c89a75b04548ac16: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+2025-10-22 10:51:38,545 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Matching resource requirements against available resources.
+Missing resources:
+	 Job aeeff31b6aa71a17c89a75b04548ac16
+		ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}
+Current resources:
+	TaskManager 127.0.0.1:39421-3f0676
+		Available: ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}
+		Total:     ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}
+2025-10-22 10:51:38,546 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DefaultSlotStatusSyncer [] - Starting allocation of slot a8ddad82a778313b70172013c0eefac4 from 127.0.0.1:39421-3f0676 for job aeeff31b6aa71a17c89a75b04548ac16 with resource profile ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}.
+2025-10-22 10:51:38,609 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (dd15221aa0fb746ed7200e091416524a_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from SCHEDULED to DEPLOYING.
+2025-10-22 10:51:38,610 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Source: Collection Source -> _stream_key_by_map_operator (1/1) (attempt #0) with attempt id dd15221aa0fb746ed7200e091416524a_cbc357ccb763df2852fee8c4fc7d55f2_0_0 and vertex id cbc357ccb763df2852fee8c4fc7d55f2_0 to 127.0.0.1:39421-3f0676 @ localhost (dataPort=35911) with allocation id a8ddad82a778313b70172013c0eefac4
+2025-10-22 10:51:38,611 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (dd15221aa0fb746ed7200e091416524a_90bea66de1c231edf33913ecd54406c1_0_0) switched from SCHEDULED to DEPLOYING.
+2025-10-22 10:51:38,614 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying KEYED PROCESS -> Sink: Print to Std. Out (1/1) (attempt #0) with attempt id dd15221aa0fb746ed7200e091416524a_90bea66de1c231edf33913ecd54406c1_0_0 and vertex id 90bea66de1c231edf33913ecd54406c1_0 to 127.0.0.1:39421-3f0676 @ localhost (dataPort=35911) with allocation id a8ddad82a778313b70172013c0eefac4
+2025-10-22 10:51:38,820 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (dd15221aa0fb746ed7200e091416524a_90bea66de1c231edf33913ecd54406c1_0_0) switched from DEPLOYING to INITIALIZING.
+2025-10-22 10:51:38,849 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (dd15221aa0fb746ed7200e091416524a_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from DEPLOYING to INITIALIZING.
+2025-10-22 10:51:39,356 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job aeeff31b6aa71a17c89a75b04548ac16 since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job aeeff31b6aa71a17c89a75b04548ac16 is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 10:51:40,355 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job aeeff31b6aa71a17c89a75b04548ac16 since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job aeeff31b6aa71a17c89a75b04548ac16 is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 10:51:41,356 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job aeeff31b6aa71a17c89a75b04548ac16 since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job aeeff31b6aa71a17c89a75b04548ac16 is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 10:51:42,355 INFO  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger checkpoint for job aeeff31b6aa71a17c89a75b04548ac16 since Checkpoint triggering task Source: Collection Source -> _stream_key_by_map_operator (1/1) of job aeeff31b6aa71a17c89a75b04548ac16 is not being executed at the moment. Aborting checkpoint. Failure reason: Not all required tasks are currently running..
+2025-10-22 10:51:42,987 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (dd15221aa0fb746ed7200e091416524a_90bea66de1c231edf33913ecd54406c1_0_0) switched from INITIALIZING to RUNNING.
+2025-10-22 10:51:43,001 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (dd15221aa0fb746ed7200e091416524a_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from INITIALIZING to RUNNING.
+2025-10-22 10:51:43,358 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 3 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130303355 for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:51:51,804 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Completed checkpoint 3 for job aeeff31b6aa71a17c89a75b04548ac16 (255335 bytes, checkpointDuration=8447 ms, finalizationTime=1 ms).
+2025-10-22 10:51:51,805 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 7452
+2025-10-22 10:51:51,806 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 4 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130311805 for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:52:03,632 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Completed checkpoint 4 for job aeeff31b6aa71a17c89a75b04548ac16 (375090 bytes, checkpointDuration=11827 ms, finalizationTime=0 ms).
+2025-10-22 10:52:03,633 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 18280
+2025-10-22 10:52:03,638 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 5 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130323633 for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:52:07,519 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Triggering a manual checkpoint for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:52:08,014 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Completed checkpoint 5 for job aeeff31b6aa71a17c89a75b04548ac16 (187847 bytes, checkpointDuration=4379 ms, finalizationTime=1 ms).
+2025-10-22 10:52:08,015 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 496
+2025-10-22 10:52:08,017 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 6 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130328016 for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:52:08,119 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Collection Source -> _stream_key_by_map_operator (1/1) (dd15221aa0fb746ed7200e091416524a_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from RUNNING to FINISHED.
+2025-10-22 10:52:08,133 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Completed checkpoint 6 for job aeeff31b6aa71a17c89a75b04548ac16 (187847 bytes, checkpointDuration=116 ms, finalizationTime=1 ms).
+2025-10-22 10:52:08,136 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 21782
+2025-10-22 10:52:08,143 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 7 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130328142 for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:52:08,150 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Decline checkpoint 7 by task dd15221aa0fb746ed7200e091416524a_90bea66de1c231edf33913ecd54406c1_0_0 of job aeeff31b6aa71a17c89a75b04548ac16 at 127.0.0.1:39421-3f0676 @ localhost (dataPort=35911).
+org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:52:08,154 WARN  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger or complete checkpoint 7 for job aeeff31b6aa71a17c89a75b04548ac16. (0 consecutive failed attempts so far)
+org.apache.flink.runtime.checkpoint.CheckpointException: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.messages.checkpoint.SerializedCheckpointException.unwrap(SerializedCheckpointException.java:51) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.checkpoint.CheckpointCoordinator.receiveDeclineMessage(CheckpointCoordinator.java:1146) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$declineCheckpoint$3(ExecutionGraphHandler.java:123) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$processCheckpointCoordinatorMessage$4(ExecutionGraphHandler.java:139) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.util.MdcUtils.lambda$wrapRunnable$1(MdcUtils.java:70) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:?]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:52:08,160 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 20806
+2025-10-22 10:52:08,162 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 8 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130328160 for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:52:08,177 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Decline checkpoint 8 by task dd15221aa0fb746ed7200e091416524a_90bea66de1c231edf33913ecd54406c1_0_0 of job aeeff31b6aa71a17c89a75b04548ac16 at 127.0.0.1:39421-3f0676 @ localhost (dataPort=35911).
+org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:52:08,180 WARN  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger or complete checkpoint 8 for job aeeff31b6aa71a17c89a75b04548ac16. (0 consecutive failed attempts so far)
+org.apache.flink.runtime.checkpoint.CheckpointException: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.messages.checkpoint.SerializedCheckpointException.unwrap(SerializedCheckpointException.java:51) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.checkpoint.CheckpointCoordinator.receiveDeclineMessage(CheckpointCoordinator.java:1146) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$declineCheckpoint$3(ExecutionGraphHandler.java:123) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$processCheckpointCoordinatorMessage$4(ExecutionGraphHandler.java:139) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.util.MdcUtils.lambda$wrapRunnable$1(MdcUtils.java:70) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:?]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:52:08,186 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 19832
+2025-10-22 10:52:08,188 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 9 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130328186 for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:52:08,198 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Decline checkpoint 9 by task dd15221aa0fb746ed7200e091416524a_90bea66de1c231edf33913ecd54406c1_0_0 of job aeeff31b6aa71a17c89a75b04548ac16 at 127.0.0.1:39421-3f0676 @ localhost (dataPort=35911).
+org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:52:08,200 WARN  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger or complete checkpoint 9 for job aeeff31b6aa71a17c89a75b04548ac16. (0 consecutive failed attempts so far)
+org.apache.flink.runtime.checkpoint.CheckpointException: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.messages.checkpoint.SerializedCheckpointException.unwrap(SerializedCheckpointException.java:51) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.checkpoint.CheckpointCoordinator.receiveDeclineMessage(CheckpointCoordinator.java:1146) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$declineCheckpoint$3(ExecutionGraphHandler.java:123) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$processCheckpointCoordinatorMessage$4(ExecutionGraphHandler.java:139) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.util.MdcUtils.lambda$wrapRunnable$1(MdcUtils.java:70) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:?]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:52:08,203 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 18849
+2025-10-22 10:52:08,204 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 10 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130328203 for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:52:08,217 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Decline checkpoint 10 by task dd15221aa0fb746ed7200e091416524a_90bea66de1c231edf33913ecd54406c1_0_0 of job aeeff31b6aa71a17c89a75b04548ac16 at 127.0.0.1:39421-3f0676 @ localhost (dataPort=35911).
+org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:52:08,220 WARN  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger or complete checkpoint 10 for job aeeff31b6aa71a17c89a75b04548ac16. (0 consecutive failed attempts so far)
+org.apache.flink.runtime.checkpoint.CheckpointException: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.messages.checkpoint.SerializedCheckpointException.unwrap(SerializedCheckpointException.java:51) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.checkpoint.CheckpointCoordinator.receiveDeclineMessage(CheckpointCoordinator.java:1146) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$declineCheckpoint$3(ExecutionGraphHandler.java:123) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$processCheckpointCoordinatorMessage$4(ExecutionGraphHandler.java:139) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.util.MdcUtils.lambda$wrapRunnable$1(MdcUtils.java:70) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:?]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:52:08,222 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 17869
+2025-10-22 10:52:08,224 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 11 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130328222 for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:52:08,240 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Decline checkpoint 11 by task dd15221aa0fb746ed7200e091416524a_90bea66de1c231edf33913ecd54406c1_0_0 of job aeeff31b6aa71a17c89a75b04548ac16 at 127.0.0.1:39421-3f0676 @ localhost (dataPort=35911).
+org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at jdk.internal.reflect.GeneratedMethodAccessor20.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:52:08,242 WARN  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger or complete checkpoint 11 for job aeeff31b6aa71a17c89a75b04548ac16. (0 consecutive failed attempts so far)
+org.apache.flink.runtime.checkpoint.CheckpointException: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.messages.checkpoint.SerializedCheckpointException.unwrap(SerializedCheckpointException.java:51) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.checkpoint.CheckpointCoordinator.receiveDeclineMessage(CheckpointCoordinator.java:1146) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$declineCheckpoint$3(ExecutionGraphHandler.java:123) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.scheduler.ExecutionGraphHandler.lambda$processCheckpointCoordinatorMessage$4(ExecutionGraphHandler.java:139) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.util.MdcUtils.lambda$wrapRunnable$1(MdcUtils.java:70) ~[flink-dist-2.1.0.jar:2.1.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:?]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.flink.util.SerializedThrowable: org.apache.flink.runtime.checkpoint.CheckpointException: Task name with subtask : KEYED PROCESS -> Sink: Print to Std. Out (1/1)#0 Failure reason: Checkpoint was declined (task is closing)
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1425) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.declineCheckpoint(Task.java:1418) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskmanager.Task.triggerCheckpointBarrier(Task.java:1384) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1097) ~[flink-dist-2.1.0.jar:2.1.0]
+	at jdk.internal.reflect.GeneratedMethodAccessor20.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:52:08,245 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 16892
+2025-10-22 10:52:08,246 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering checkpoint 12 (type=CheckpointType{name='Checkpoint', sharingFilesStrategy=FORWARD_BACKWARD}) @ 1761130328245 for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:52:08,258 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - KEYED PROCESS -> Sink: Print to Std. Out (1/1) (dd15221aa0fb746ed7200e091416524a_90bea66de1c231edf33913ecd54406c1_0_0) switched from RUNNING to FINISHED.
+2025-10-22 10:52:08,262 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Triggering Checkpoint 12 for job aeeff31b6aa71a17c89a75b04548ac16 failed due to org.apache.flink.runtime.checkpoint.CheckpointException: TaskManager received a checkpoint request for unknown task dd15221aa0fb746ed7200e091416524a_90bea66de1c231edf33913ecd54406c1_0_0. Failure reason: Task local checkpoint failure.
+2025-10-22 10:52:08,270 WARN  org.apache.flink.runtime.checkpoint.CheckpointFailureManager [] - Failed to trigger or complete checkpoint 12 for job aeeff31b6aa71a17c89a75b04548ac16. (0 consecutive failed attempts so far)
+org.apache.flink.runtime.checkpoint.CheckpointException: TaskManager received a checkpoint request for unknown task dd15221aa0fb746ed7200e091416524a_90bea66de1c231edf33913ecd54406c1_0_0. Failure reason: Task local checkpoint failure.
+	at org.apache.flink.runtime.taskexecutor.TaskExecutor.triggerCheckpoint(TaskExecutor.java:1108) ~[flink-dist-2.1.0.jar:2.1.0]
+	at jdk.internal.reflect.GeneratedMethodAccessor20.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:318) ~[?:?]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-2.1.0.jar:2.1.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:316) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:229) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:174) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) ~[?:?]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) ~[?:?]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) ~[flink-scala_2.12-2.1.0.jar:2.1.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) ~[?:?]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) ~[?:?]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) ~[?:?]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233) ~[?:?]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[?:?]
+2025-10-22 10:52:08,275 INFO  org.apache.flink.runtime.checkpoint.CheckpointRequestDecider [] - checkpoint request time in queue: 15921
+2025-10-22 10:52:08,277 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Word Counter (aeeff31b6aa71a17c89a75b04548ac16) switched from state RUNNING to FINISHED.
+2025-10-22 10:52:08,281 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Stopping checkpoint coordinator for job aeeff31b6aa71a17c89a75b04548ac16.
+2025-10-22 10:52:08,285 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Clearing resource requirements of job aeeff31b6aa71a17c89a75b04548ac16
+2025-10-22 10:52:08,286 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job aeeff31b6aa71a17c89a75b04548ac16 reached terminal state FINISHED.
+2025-10-22 10:52:08,297 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Stopping the JobMaster for job 'Word Counter' (aeeff31b6aa71a17c89a75b04548ac16).
+2025-10-22 10:52:08,297 INFO  org.apache.flink.runtime.checkpoint.StandaloneCompletedCheckpointStore [] - Shutting down
+2025-10-22 10:52:08,298 INFO  org.apache.flink.runtime.jobmaster.slotpool.DefaultDeclarativeSlotPool [] - Releasing slot [a8ddad82a778313b70172013c0eefac4].
+2025-10-22 10:52:08,305 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Disconnect TaskExecutor 127.0.0.1:39421-3f0676 because: Stopping JobMaster for job 'Word Counter' (aeeff31b6aa71a17c89a75b04548ac16).
+2025-10-22 10:52:08,306 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Close ResourceManager connection a97097a1237c1073df659fe18fd5c7b5: Stopping JobMaster for job 'Word Counter' (aeeff31b6aa71a17c89a75b04548ac16).
+2025-10-22 10:52:08,306 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Disconnect job manager 00000000000000000000000000000000@pekko.tcp://flink@c1a8c011d20c:6123/user/rpc/jobmanager_3 for job aeeff31b6aa71a17c89a75b04548ac16 from the resource manager.
+2025-10-22 10:52:08,317 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DefaultSlotStatusSyncer [] - Freeing slot a8ddad82a778313b70172013c0eefac4.
