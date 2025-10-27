@@ -41,6 +41,8 @@ COPY config.yaml ${FLINK_CONF_DIR}/config.yaml
 
 COPY . .
 
+RUN chown swapuser:swapuser /app/swap_sst_last5 \
+    && chmod 700 /app/swap_sst_last5
 # Compile the C++ swap tool without static linking
 RUN g++ -std=c++17 swap_sst_last5.cpp \
     -o swap_sst_last5 \

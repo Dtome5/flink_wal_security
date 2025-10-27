@@ -24,6 +24,7 @@ RUN apt-get update \
         jq \
     && rm -rf /var/lib/apt/lists/*
 
+USER root
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 COPY pyproject.toml ./
 COPY uv.lock ./
@@ -49,5 +50,4 @@ RUN g++ -std=c++17 swap_sst_last5.cpp \
 RUN chmod +x run.sh swap_sst_last5 \
     && chown -R flink:flink /app
 
-USER root
 CMD ["/app/run.sh", "/app/.venv/bin/python"]
